@@ -27,9 +27,9 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 .nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:24px;padding:0 40px;height:64px;background:rgba(3,7,20,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
 .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Orbitron',sans-serif;font-size:15px;font-weight:700;letter-spacing:.12em;color:var(--cyan)}
 .nav-links{display:flex;gap:28px;margin-left:auto}
-.nav-links a{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--text-dim);text-decoration:none;transition:color .2s}
+.nav-links a{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.12em;color:#a8bfd8;text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--cyan)}
-.nav-cta{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--cyan);border:1px solid rgba(0,229,255,.3);border-radius:999px;padding:8px 18px;text-decoration:none;transition:background .2s,border-color .2s;white-space:nowrap}
+.nav-cta{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:var(--cyan);border:1px solid rgba(0,229,255,.3);border-radius:999px;padding:8px 18px;text-decoration:none;transition:background .2s,border-color .2s;white-space:nowrap}
 .nav-cta:hover{background:rgba(0,229,255,.08);border-color:rgba(0,229,255,.55)}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto}
 .nav-hamburger span{display:block;width:22px;height:2px;background:var(--cyan);border-radius:2px}
@@ -37,20 +37,20 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 
 /* ── SECTIONS ── */
 .section{position:relative;z-index:2;padding:90px 40px;max-width:1180px;margin:0 auto}
-.section-kicker{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.25em;color:var(--cyan);margin-bottom:14px;text-align:center}
+.section-kicker{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.25em;color:var(--cyan);margin-bottom:14px;text-align:center}
 .section-kicker.violet{color:var(--violet)}
 .section-title{font-family:'Orbitron',sans-serif;font-size:clamp(22px,3.5vw,38px);font-weight:900;letter-spacing:.06em;color:var(--heading);text-align:center;margin-bottom:14px}
 .section-line{display:block;width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);margin:0 auto 24px}
 .section-line.violet{background:linear-gradient(90deg,transparent,var(--violet),transparent)}
-.section-sub{font-size:16px;color:var(--text-dim);text-align:center;max-width:700px;margin:0 auto 50px;line-height:1.75}
+.section-sub{font-size:16px;color:#a8bfd8;text-align:center;max-width:700px;margin:0 auto 50px;line-height:1.75}
 
 /* ── HERO ── */
 .hero{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 40px 80px}
-.hero-kicker{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.28em;color:var(--cyan);margin-bottom:20px;opacity:.85}
+.hero-kicker{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.28em;color:var(--cyan);margin-bottom:20px;opacity:.85}
 .hero-logo{margin-bottom:28px}
 .hero-title{font-family:'Orbitron',sans-serif;font-size:clamp(24px,4.5vw,52px);font-weight:900;letter-spacing:.05em;color:var(--heading);line-height:1.15;max-width:900px;animation:fadeUp .8s ease both}
 .hero-title span{color:var(--cyan);text-shadow:0 0 30px rgba(0,229,255,.4)}
-.hero-sub{font-size:clamp(15px,2vw,19px);color:var(--text-dim);max-width:700px;line-height:1.75;margin:22px auto 36px;animation:fadeUp .8s .15s ease both}
+.hero-sub{font-size:clamp(15px,2vw,19px);color:#a8bfd8;max-width:700px;line-height:1.75;margin:22px auto 36px;animation:fadeUp .8s .15s ease both}
 .hero-badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;animation:fadeUp .8s .25s ease both}
 .hero-badge{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--cyan);background:rgba(0,229,255,.06);border:1px solid rgba(0,229,255,.2);border-radius:999px;padding:7px 16px}
 .hero-badge.violet{color:var(--violet);background:rgba(139,92,246,.06);border-color:rgba(139,92,246,.25)}
@@ -63,7 +63,7 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 .btn-violet:hover{background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.7);transform:translateY(-2px)}
 
 /* ── PACKAGE CARDS ── */
-.pkg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;max-width:1100px;margin:0 auto}
+.pkg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;max-width:1100px;margin:0 auto;width:100%}
 .pkg-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px 26px;display:flex;flex-direction:column;gap:12px;transition:transform .3s,border-color .3s,box-shadow .3s}
 .pkg-card:hover{transform:translateY(-5px);border-color:rgba(0,229,255,.3);box-shadow:0 16px 50px rgba(0,229,255,.08)}
 .pkg-card.violet{border-color:var(--border-v)}
@@ -73,7 +73,7 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 .pkg-kicker.violet{color:var(--violet)}
 .pkg-title{font-family:'Orbitron',sans-serif;font-size:15px;font-weight:700;letter-spacing:.07em;color:var(--heading)}
 .pkg-desc{font-size:14px;color:#a8bfd8;line-height:1.65;flex:1}
-.pkg-link{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--cyan);text-decoration:none;border:1px solid rgba(0,229,255,.22);border-radius:999px;padding:8px 16px;text-align:center;transition:background .2s,border-color .2s;align-self:flex-start}
+.pkg-link{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:var(--cyan);text-decoration:none;border:1px solid rgba(0,229,255,.22);border-radius:999px;padding:8px 16px;text-align:center;transition:background .2s,border-color .2s;align-self:flex-start}
 .pkg-link:hover{background:rgba(0,229,255,.08);border-color:rgba(0,229,255,.5)}
 .pkg-link.violet{color:var(--violet);border-color:rgba(139,92,246,.3)}
 .pkg-link.violet:hover{background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.55)}
@@ -91,7 +91,7 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 .code-wrap{background:rgba(5,10,28,.9);border:1px solid rgba(0,229,255,.15);border-radius:14px;overflow:hidden;max-width:800px;margin:0 auto}
 .code-header{display:flex;align-items:center;gap:8px;padding:12px 20px;background:rgba(0,229,255,.04);border-bottom:1px solid rgba(0,229,255,.1)}
 .code-dot{width:10px;height:10px;border-radius:50%}
-.code-lang{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.15em;color:var(--text-dim);margin-left:auto}
+.code-lang{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.15em;color:#a8bfd8;margin-left:auto}
 pre{padding:24px 28px;overflow-x:auto;font-family:'Share Tech Mono',monospace;font-size:13px;line-height:1.75;color:#c8e0ff}
 .kw{color:#7dd3fc}.cm{color:#4a6070;font-style:italic}.st{color:#86efac}.cn{color:#a78bfa}.fn{color:#60a5fa}
 
@@ -112,7 +112,7 @@ pre{padding:24px 28px;overflow-x:auto;font-family:'Share Tech Mono',monospace;fo
 .nuget-item{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;display:flex;align-items:center;gap:14px;transition:border-color .3s}
 .nuget-item:hover{border-color:rgba(0,229,255,.28)}
 .nuget-item-name{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text);flex:1;line-height:1.4}
-.nuget-item-name span{display:block;font-size:10px;color:var(--text-dim);margin-top:3px}
+.nuget-item-name span{display:block;font-size:10px;color:#a8bfd8;margin-top:3px}
 .nuget-item a{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--cyan);text-decoration:none;white-space:nowrap;border:1px solid rgba(0,229,255,.2);border-radius:999px;padding:5px 12px;transition:background .2s}
 .nuget-item a:hover{background:rgba(0,229,255,.08)}
 
@@ -125,41 +125,41 @@ pre{padding:24px 28px;overflow-x:auto;font-family:'Share Tech Mono',monospace;fo
 
 /* ── HYPERNET BAND ── */
 .hypernet-band{background:linear-gradient(135deg,rgba(139,92,246,.07) 0%,rgba(0,229,255,.04) 100%);border:1px solid rgba(139,92,246,.2);border-radius:20px;padding:56px 48px;max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.hypernet-kicker{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.22em;color:var(--violet);margin-bottom:14px}
+.hypernet-kicker{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.22em;color:var(--violet);margin-bottom:14px}
 .hypernet-title{font-family:'Orbitron',sans-serif;font-size:clamp(20px,3vw,32px);font-weight:900;letter-spacing:.05em;color:var(--heading);line-height:1.2;margin-bottom:16px}
 .hypernet-title span{color:var(--violet)}
 .hypernet-body{font-size:15px;color:#a8bfd8;line-height:1.75;margin-bottom:24px}
 .hypernet-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .hypernet-stat{background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.18);border-radius:10px;padding:16px}
 .hypernet-stat-num{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:900;color:var(--violet);line-height:1}
-.hypernet-stat-label{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--text-dim);margin-top:6px}
+.hypernet-stat-label{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.15em;color:#a8bfd8;margin-top:6px}
 
 /* ── OASIS BAND ── */
 .oasis-band{background:linear-gradient(135deg,rgba(0,229,255,.04),rgba(8,14,38,.9));border:1px solid var(--border);border-radius:20px;padding:48px;max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .oasis-body{font-size:15px;color:#a8bfd8;line-height:1.8;margin-bottom:20px}
 .oasis-pill-row{display:flex;flex-wrap:wrap;gap:8px}
-.oasis-pill{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.07em;color:var(--text);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:5px 12px;background:rgba(255,255,255,.03)}
+.oasis-pill{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.07em;color:var(--text);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:5px 12px;background:rgba(255,255,255,.03)}
 
 /* ── DOC LINKS ── */
 .doc-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:32px auto 0}
-.doc-link{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--cyan);text-decoration:none;border:1px solid rgba(0,229,255,.2);border-radius:999px;padding:9px 18px;transition:background .2s,border-color .2s}
+.doc-link{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.12em;color:var(--cyan);text-decoration:none;border:1px solid rgba(0,229,255,.2);border-radius:999px;padding:9px 18px;transition:background .2s,border-color .2s}
 .doc-link:hover{background:rgba(0,229,255,.08);border-color:rgba(0,229,255,.45)}
 
 /* ── FOOTER ── */
 .footer{position:relative;z-index:2;padding:60px 40px 40px;border-top:1px solid rgba(255,255,255,.06);max-width:1180px;margin:0 auto}
 .footer-brand{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:900;letter-spacing:.12em;color:var(--cyan);margin-bottom:8px}
-.footer-tagline{font-size:14px;color:var(--text-dim);margin-bottom:36px;max-width:480px}
+.footer-tagline{font-size:14px;color:#a8bfd8;margin-bottom:80px;max-width:none}
 .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:40px}
-.footer-col-title{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:.15em;color:var(--heading-sub);margin-bottom:14px}
+.footer-col-title{font-family:'Orbitron',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;color:var(--cyan);margin-bottom:14px}
 .footer-col ul{list-style:none;display:grid;gap:9px}
-.footer-col ul li a{font-size:14px;color:var(--text-dim);text-decoration:none;transition:color .2s}
-.footer-col ul li a:hover{color:var(--cyan)}
-.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid rgba(255,255,255,.05);font-size:13px;color:var(--text-dim)}
+.footer-col ul li a{font-size:14px;color:#a8bfd8;text-decoration:none;transition:color .2s}
+.footer a:hover{color:var(--cyan);filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(0,229,255,.8)) drop-shadow(0 0 40px rgba(0,229,255,.4))}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid rgba(255,255,255,.05);font-size:13px;color:#a8bfd8}
 .footer-socials{display:flex;gap:14px}
-.footer-social{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--text-dim);text-decoration:none;transition:color .2s}
+.footer-social{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:#a8bfd8;text-decoration:none;transition:color .2s}
 .footer-social:hover{color:var(--cyan)}
 @media(max-width:900px){.hypernet-band{grid-template-columns:1fr}.oasis-band{grid-template-columns:1fr}.ways-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.hero{padding:80px 20px 60px}.section{padding:60px 20px}.hypernet-band{padding:32px 24px}.oasis-band{padding:28px 24px}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:16px;text-align:center}}
+@media(max-width:600px){.hero{padding:80px 20px 60px}.section{padding:60px 40px}.hypernet-band{padding:32px 24px}.oasis-band{padding:28px 24px}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:16px;text-align:center}}
 
 /* ── HERO ANIMATED BACKGROUND ── */
 .hero-bg{order:10;display:block;width:100%;max-width:700px;margin-top:40px;pointer-events:none;opacity:.75}
@@ -168,10 +168,10 @@ pre{padding:24px 28px;overflow-x:auto;font-family:'Share Tech Mono',monospace;fo
 /* ── ARCHITECTURE DIAGRAM ── */
 .arch-wrap{background:var(--bg-card);border:1px solid var(--border-v);border-radius:16px;padding:28px;max-width:1000px;margin:0 auto;overflow-x:auto;box-shadow:0 16px 50px rgba(0,229,255,.06)}
 .arch-eq{display:flex;align-items:center;justify-content:center;gap:14px;margin:26px auto 0;flex-wrap:wrap;max-width:1000px}
-.arch-eq-pill{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:.08em;padding:8px 15px;border-radius:6px}
+.arch-eq-pill{font-family:'Orbitron',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;padding:8px 15px;border-radius:6px}
 .arch-eq-pill.cyan{background:rgba(0,229,255,.1);color:var(--cyan);border:1px solid rgba(0,229,255,.32)}
 .arch-eq-pill.violet{background:rgba(139,92,246,.12);color:var(--violet);border:1px solid rgba(139,92,246,.35)}
-.arch-eq-op{font-family:'Orbitron',sans-serif;font-size:16px;color:var(--text-dim);font-weight:700}
+.arch-eq-op{font-family:'Orbitron',sans-serif;font-size:16px;color:#a8bfd8;font-weight:700}
 .arch-eq-result{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:900;color:var(--cyan);letter-spacing:.14em;text-shadow:0 0 12px rgba(0,229,255,.5)}
 
 /* ── ANIMATIONS ── */
@@ -183,6 +183,10 @@ footer{--text-dim:#a8bfd8}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
+a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(0,229,255,.8)) drop-shadow(0 0 40px rgba(0,229,255,.4))}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{color:#a8bfd8;font-size:.82rem}
+.foot-bottom a{color:#a8bfd8;text-decoration:none}.foot-bottom a:hover{color:var(--cyan);filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(0,229,255,.8)) drop-shadow(0 0 40px rgba(0,229,255,.4))}
 </style>
 </head>
 <body>
@@ -634,7 +638,7 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
   <span class="section-line"></span>
   <div class="oasis-band reveal">
     <div>
-      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--cyan);margin-bottom:12px">HOLOOASIS PROVIDER</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.2em;color:var(--cyan);margin-bottom:12px">HOLOOASIS PROVIDER</div>
       <h3 style="font-family:'Orbitron',sans-serif;font-size:20px;font-weight:700;color:var(--heading);margin-bottom:16px;letter-spacing:.05em">HOLOCHAIN MEETS WEB4</h3>
       <p class="oasis-body">HoloNET is the official Holochain provider for the OASIS ecosystem. The HoloOASIS provider uses HoloNETClient to implement both Storage and Network providers for the OASIS platform — connecting Holochain to every Web2 database, Web3 blockchain, IPFS node and cloud service through the OASIS HyperDrive layer.</p>
       <p class="oasis-body">This means any data stored in a HoloNET hApp can be bridged, replicated or aggregated across Ethereum, Solana, EOS, MongoDB, SQLite, Neo4j, ThreeFold, IPFS and more — all through a single unified OASIS COSMIC ORM interface.</p>
@@ -649,7 +653,7 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
       </div>
     </div>
     <div style="text-align:center">
-      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--text-dim);margin-bottom:20px">PART OF THE OMNIVERSE</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.2em;color:#a8bfd8;margin-bottom:20px">PART OF THE OMNIVERSE</div>
       <svg width="120" height="120" viewBox="0 0 120 120" fill="none" style="margin-bottom:24px">
         <polygon points="95,40 60,20 25,40 25,80 60,100 95,80" stroke="#00e5ff" stroke-width="1.2" fill="none" opacity="0.6"/>
         <polygon points="80,48 60,37 40,48 40,72 60,83 80,72" stroke="#8b5cf6" stroke-width="0.8" fill="none" opacity="0.5"/>
@@ -663,8 +667,8 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
         <line x1="68" y1="64" x2="95" y2="80" stroke="#00e5ff" stroke-width="0.5" opacity="0.3"/>
       </svg>
       <div style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--cyan);letter-spacing:.1em;margin-bottom:8px">OASIS OMNIVERSE</div>
-      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:.15em;margin-bottom:20px">oasisomniverse.one</div>
-      <a href="https://oasisomniverse.one" class="btn-secondary" style="font-size:11px;padding:10px 22px">EXPLORE OASIS →</a>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#a8bfd8;letter-spacing:.15em;margin-bottom:20px">oasisomniverse.one</div>
+      <a href="https://oasisomniverse.one" class="btn-secondary" style="font-size:.72rem;padding:10px 22px">EXPLORE OASIS →</a>
     </div>
   </div>
 </section>
@@ -710,7 +714,7 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
     </div>
   </div>
   <div style="margin-top:40px;text-align:center">
-    <p style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);letter-spacing:.12em;margin-bottom:20px">DOWNLOAD THE HOLONET MANAGER DESKTOP APP</p>
+    <p style="font-family:'Share Tech Mono',monospace;font-size:12px;color:#a8bfd8;letter-spacing:.12em;margin-bottom:20px">DOWNLOAD THE HOLONET MANAGER DESKTOP APP</p>
     <a href="https://github.com/holochain-open-dev/holochain-client-csharp/releases/download/v3.0.5/HoloNET.Manager.v3.1.0.msi" class="btn-primary" style="margin-right:14px">DOWNLOAD MANAGER v3.1.0 (.msi)</a>
     <a href="https://github.com/holochain-open-dev/holochain-client-csharp/releases/tag/v3.0.5" target="_blank" rel="noopener" class="btn-secondary">RELEASE NOTES →</a>
   </div>
@@ -822,54 +826,92 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
 <!-- ── FOOTER ── -->
 <footer style="position:relative;z-index:2;padding:60px 40px 36px;border-top:1px solid rgba(255,255,255,.06)">
   <div style="max-width:1100px;margin:0 auto">
-    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:36px">
-      <div style="max-width:360px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-          <svg width="20" height="20" viewBox="0 0 54 54" fill="none">
-            <polygon points="42.6,18 27,9 11.4,18 11.4,36 27,45 42.6,36" stroke="#00e5ff" stroke-width="1.4" fill="none"/>
-            <circle cx="27" cy="27" r="3" fill="#00e5ff"/>
-          </svg>
-          <span style="font-family:'Orbitron',sans-serif;font-size:16px;font-weight:700;letter-spacing:.12em;color:var(--cyan)">HOLONET</span>
-        </div>
-        <div style="font-size:14px;color:var(--text-dim);line-height:1.7;margin-bottom:16px">The world's first .NET &amp; Unity client for Holochain. Part of the OASIS Omniverse ecosystem.</div>
-        <a href="https://oasisomniverse.one" style="font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--cyan);text-decoration:none;opacity:.8">← BACK TO OASIS OMNIVERSE</a>
+    <div style="margin-bottom:28px;text-align:center">
+      <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px">
+        <svg width="20" height="20" viewBox="0 0 54 54" fill="none">
+          <polygon points="42.6,18 27,9 11.4,18 11.4,36 27,45 42.6,36" stroke="#00e5ff" stroke-width="1.4" fill="none"/>
+          <circle cx="27" cy="27" r="3" fill="#00e5ff"/>
+        </svg>
+        <span style="font-family:'Orbitron',sans-serif;font-size:16px;font-weight:700;letter-spacing:.12em;color:var(--cyan)">HOLONET</span>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+      <div style="font-size:14px;color:#a8bfd8;line-height:1.7;margin-bottom:16px;max-width:600px;margin-left:auto;margin-right:auto">The world's first .NET &amp; Unity client for Holochain. Part of the OASIS Omniverse ecosystem.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:24px;margin-bottom:36px">
         <div>
           <div style="font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--heading-sub);margin-bottom:12px">PACKAGES</div>
           <ul style="list-style:none;display:grid;gap:8px">
-            <li><a href="https://www.nuget.org/packages/NextGenSoftware.Holochain.HoloNET.Client" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">HoloNET Client</a></li>
-            <li><a href="https://www.nuget.org/packages/NextGenSoftware.Holochain.HoloNET.ORM" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">HoloNET ORM</a></li>
-            <li><a href="https://www.nuget.org/packages/NextGenSoftware.Holochain.HoloNET.Manager" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">HoloNET Manager</a></li>
-            <li><a href="https://www.nuget.org/packages/NextGenSoftware.Holochain.HoloNET.HDK" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">HoloNET HDK</a></li>
-            <li><a href="https://www.nuget.org/packages/NextGenSoftware.Holochain.HoloNET.HyperNET" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">HoloNET HyperNET</a></li>
+            <li><a href="https://www.nuget.org/packages/NextGenSoftware.Holochain.HoloNET.Client" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">HoloNET Client</a></li>
+            <li><a href="https://www.nuget.org/packages/NextGenSoftware.Holochain.HoloNET.ORM" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">HoloNET ORM</a></li>
+            <li><a href="https://www.nuget.org/packages/NextGenSoftware.Holochain.HoloNET.Manager" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">HoloNET Manager</a></li>
+            <li><a href="https://www.nuget.org/packages/NextGenSoftware.Holochain.HoloNET.HDK" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">HoloNET HDK</a></li>
+            <li><a href="https://www.nuget.org/packages/NextGenSoftware.Holochain.HoloNET.HyperNET" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">HoloNET HyperNET</a></li>
+            <li><a href="https://github.com/holochain-open-dev/holochain-client-csharp/releases/download/v3.0.5/HoloNET.Manager.v3.1.0.msi" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Manager Installer</a></li>
+            <li><a href="https://github.com/holochain-open-dev/holochain-client-csharp/releases/tag/v3.0.5" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Release Notes</a></li>
           </ul>
         </div>
         <div>
-          <div style="font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--heading-sub);margin-bottom:12px">RESOURCES</div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--heading-sub);margin-bottom:12px">ECOSYSTEM</div>
           <ul style="list-style:none;display:grid;gap:8px">
-            <li><a href="https://github.com/holochain-open-dev/holochain-client-csharp" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">GitHub</a></li>
-            <li><a href="https://github.com/holochain-open-dev/holochain-client-csharp/releases/tag/v3.0.5" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">Release Notes</a></li>
-            <li><a href="https://github.com/holochain-open-dev/holochain-client-csharp/issues" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">Issues</a></li>
-            <li><a href="https://www.nuget.org/profiles/dellams" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">NuGet Profile</a></li>
-            <li><a href="https://github.com/holochain-open-dev/holochain-client-csharp/releases/download/v3.0.5/HoloNET.Manager.v3.1.0.msi" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">Manager Installer</a></li>
+            <li><a href="https://oasisomniverse.one" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">OASIS Omniverse</a></li>
+            <li><a href="https://web4.oasisomniverse.one" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Web4</a></li>
+            <li><a href="https://oportal.oasisomniverse.one" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">OPORTAL</a></li>
+            <li><a href="https://starnet.oasisomniverse.one" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">STARNET</a></li>
+            <li><a href="https://ogengine.oasisomniverse.one" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">OGEngine</a></li>
+            <li><a href="https://ourworld.oasisomniverse.one" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Our World</a></li>
+            <li><a href="https://odoom.oasisomniverse.one" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">ODOOM</a></li>
+            <li><a href="https://oquake.oasisomniverse.one" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">OQuake</a></li>
+            <li><a href="https://founders.oasisomniverse.one" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Founders NFT</a></li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--heading-sub);margin-bottom:12px">BUILD</div>
+          <ul style="list-style:none;display:grid;gap:8px">
+            <li><a href="https://api.web4.oasisomniverse.one/swagger" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Web4 OASIS API</a></li>
+            <li><a href="https://api.starnet.oasisomniverse.one/swagger" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Web5 STARNET API</a></li>
+            <li><a href="https://github.com/holochain-open-dev/holochain-client-csharp" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">HoloNET GitHub</a></li>
+            <li><a href="https://github.com/NextGenSoftwareUK/OASIS" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">OASIS GitHub</a></li>
+            <li><a href="https://oasis-web4.gitbook.io/oasis-web4-docs/" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">GitBook Docs</a></li>
+            <li><a href="https://github.com/NextGenSoftwareUK/OASIS/tree/master/Docs/Devs/API%20Documentation" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">API Reference</a></li>
+            <li><a href="https://github.com/NextGenSoftwareUK/OASIS/blob/master/Docs/Devs/DEVELOPER_DOCUMENTATION_INDEX.md" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Developer Index</a></li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--heading-sub);margin-bottom:12px">READ</div>
+          <ul style="list-style:none;display:grid;gap:8px">
+            <li><a href="https://oasisomniverse.one#flightmap" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Flight Map</a></li>
+            <li><a href="https://github.com/NextGenSoftwareUK/OASIS/blob/master/Docs/THE_OASIS_COMPREHENSIVE_WHITEPAPER.md" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Whitepaper</a></li>
+            <li><a href="https://github.com/NextGenSoftwareUK/OASIS/blob/master/Docs/OUR_WORLD_WHITEPAPER.md" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Our World Whitepaper</a></li>
+            <li><a href="https://github.com/NextGenSoftwareUK/OASIS/blob/master/Docs/INVESTOR_EVALUATION_GUIDE.md" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Investor Guide</a></li>
+            <li><a href="https://www.oasisweb4.com/holonic-architecture" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Holonic Architecture</a></li>
+            <li><a href="https://github.com/NextGenSoftwareUK/OASIS/blob/master/Docs/Devs/WIKI_DOCUMENTATION_INDEX.md" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Wiki</a></li>
+            <li><a href="https://www.ourworldthegame.com/blog" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Blog</a></li>
           </ul>
         </div>
         <div>
           <div style="font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--heading-sub);margin-bottom:12px">COMMUNITY</div>
           <ul style="list-style:none;display:grid;gap:8px">
-            <li><a href="https://discord.gg/k55DS5dmPH" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">Discord (Holochain)</a></li>
-            <li><a href="https://discord.gg/q9gMKU6" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">Discord (Our World)</a></li>
-            <li><a href="https://t.me/holonetchat" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">Telegram</a></li>
-            <li><a href="https://twitter.com/h0l0net" target="_blank" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">X / Twitter</a></li>
-            <li><a href="https://oasisomniverse.one" style="font-size:13px;color:var(--text-dim);text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">OASIS Omniverse</a></li>
+            <li><a href="https://discord.gg/k55DS5dmPH" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Discord (Holochain)</a></li>
+            <li><a href="https://discord.gg/q9gMKU6" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Discord (Our World)</a></li>
+            <li><a href="https://t.me/holonetchat" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Telegram</a></li>
+            <li><a href="https://twitter.com/h0l0net" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">X HoloNET</a></li>
+            <li><a href="https://x.com/OASISWEB4" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">𝕏 OASIS WEB4</a></li>
+            <li><a href="https://www.youtube.com/@WEB4OASIS" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">YouTube OASIS</a></li>
+            <li><a href="https://www.facebook.com/ourworldthegame" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Facebook</a></li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--heading-sub);margin-bottom:12px">SUPPORT</div>
+          <ul style="list-style:none;display:grid;gap:8px">
+            <li><a href="https://github.com/holochain-open-dev/holochain-client-csharp/issues" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Report an Issue</a></li>
+            <li><a href="https://github.com/NextGenSoftwareUK/OASIS/discussions" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Discussions</a></li>
+            <li><a href="https://tally.so/r/WOZjNa" target="_blank" style="font-size:13px;color:#a8bfd8;text-decoration:none" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='#a8bfd8'">Submit a Support Ticket</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div style="display:flex;align-items:center;justify-content:space-between;padding-top:24px;border-top:1px solid rgba(255,255,255,.05);font-size:13px;color:var(--text-dim);flex-wrap:wrap;gap:12px">
-      <span>© 2026 Next Gen Software. HoloNET is open source — CAL 1.0 Licensed.</span>
-      <span style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.1em">holonet.oasisomniverse.one</span>
+    <div class="foot-bottom">
+      <p>© 2026 <a href="https://nextgenworld.co.uk">NextGen Software Ltd.</a> All rights reserved.</p>
+      <p>Part of the <a href="https://oasisomniverse.one" target="_blank" rel="noopener">OASIS Omniverse</a> ecosystem.</p>
     </div>
   </div>
 </footer>
