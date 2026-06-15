@@ -467,6 +467,110 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
   </div>
 </section>
 
+<!-- ── STACK DIAGRAM ── -->
+<section class="section" id="stack" style="background:rgba(255,255,255,.005);padding-top:0">
+  <div class="section-kicker">ARCHITECTURE</div>
+  <h2 class="section-title">THE HOLONET STACK</h2>
+  <span class="section-line"></span>
+  <p class="section-sub">Each approach adds an abstraction layer on top of the last. Choose the level that suits your project.</p>
+
+  <style>
+    .hn-diag-wrap{font-family:'Titillium Web',sans-serif;max-width:860px;margin:0 auto}
+    .hn-diag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+    .hn-diag-col{display:flex;flex-direction:column;gap:0;padding:0 10px}
+    .hn-diag-col:not(:last-child){border-right:1px solid rgba(255,255,255,.05)}
+    .hn-dcol-tag{font-size:9px;font-weight:700;letter-spacing:.2em;text-align:center;color:rgba(0,229,255,.5);text-transform:uppercase;padding:0 0 6px}
+    .hn-dcol-head{font-size:10px;font-weight:700;letter-spacing:.14em;text-align:center;color:var(--cyan);text-transform:uppercase;padding:0 0 10px}
+    .hn-dlayer{border-radius:6px;padding:9px 12px;text-align:center}
+    .hn-dlayer-name{font-size:11.5px;font-weight:600;letter-spacing:.03em;line-height:1.3}
+    .hn-dlayer-sub{font-size:9.5px;color:rgba(255,255,255,.45);margin-top:2px;line-height:1.3}
+    .hn-dconn{display:flex;flex-direction:column;align-items:center;gap:0;padding:2px 0}
+    .hn-dconn-line{width:1px;height:12px;background:rgba(255,255,255,.15)}
+    .hn-dconn-arrow{font-size:9px;color:rgba(255,255,255,.25);line-height:1}
+    .hn-dconn-lbl{font-family:'Share Tech Mono',monospace;font-size:8px;color:rgba(255,255,255,.28);letter-spacing:.07em;text-align:center;padding:0 4px}
+    .hn-dlayer.l-app{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.28);color:#86efac}
+    .hn-dlayer.l-user{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);color:#86efac}
+    .hn-dlayer.l-hn-hi{background:rgba(0,229,255,.12);border:1px solid rgba(0,229,255,.38);color:#67e8f9}
+    .hn-dlayer.l-hn{background:rgba(0,229,255,.07);border:1px solid rgba(0,229,255,.24);color:#67e8f9}
+    .hn-dlayer.l-hc{background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.28);color:#c4b5fd}
+    .hn-dlayer.l-hclo{background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.18);color:#c4b5fd}
+    .hn-dcol-note{margin-top:12px;padding:8px 10px;background:rgba(255,255,255,.03);border-radius:6px;font-size:9.5px;color:#a8bfd8;line-height:1.5;text-align:center;border:1px solid rgba(255,255,255,.06)}
+    .hn-diag-key{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-bottom:24px;padding:12px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px}
+    .hn-dk-item{display:flex;align-items:center;gap:7px;font-size:11px;color:#a8bfd8}
+    .hn-dk-dot{width:11px;height:11px;border-radius:3px;flex-shrink:0}
+    .hn-dk-dot.dg{background:rgba(34,197,94,.2);border:1px solid rgba(34,197,94,.45)}
+    .hn-dk-dot.dc{background:rgba(0,229,255,.18);border:1px solid rgba(0,229,255,.45)}
+    .hn-dk-dot.dv{background:rgba(139,92,246,.2);border:1px solid rgba(139,92,246,.45)}
+    .hn-diag-note{background:rgba(0,229,255,.04);border:1px solid rgba(0,229,255,.12);border-radius:8px;padding:11px 16px;font-size:11px;color:#a8bfd8;text-align:center;line-height:1.6}
+    .hn-diag-note strong{color:#00e5ff}
+  </style>
+
+  <div class="hn-diag-wrap reveal">
+    <div class="hn-diag-grid">
+
+      <!-- Option 1: Direct -->
+      <div class="hn-diag-col">
+        <div class="hn-dcol-tag">Option 1</div>
+        <div class="hn-dcol-head">Direct Client</div>
+        <div class="hn-dlayer l-app"><div class="hn-dlayer-name">Your .NET / Unity App</div><div class="hn-dlayer-sub">Game · Website · Service</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-hn"><div class="hn-dlayer-name">HoloNETClient</div><div class="hn-dlayer-sub">WebSocket · MessagePack</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-hc"><div class="hn-dlayer-name">Holochain Conductor</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↓</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-hclo"><div class="hn-dlayer-name">Rust hApp</div></div>
+        <div class="hn-dcol-note">Full control. Direct zome calls and signal handling.</div>
+      </div>
+
+      <!-- Option 2: Entry Base Class -->
+      <div class="hn-diag-col">
+        <div class="hn-dcol-tag">Option 2</div>
+        <div class="hn-dcol-head">Entry Base Class</div>
+        <div class="hn-dlayer l-app"><div class="hn-dlayer-name">Your .NET / Unity App</div><div class="hn-dlayer-sub">Game · Website · Service</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-user"><div class="hn-dlayer-name">Your HoloNET Entry Class</div><div class="hn-dlayer-sub">Extend &amp; customise</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-hn-hi"><div class="hn-dlayer-name">HoloNETEntryBaseClass</div><div class="hn-dlayer-sub">Load · Save · Delete</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-hn"><div class="hn-dlayer-name">HoloNETClient</div><div class="hn-dlayer-sub">WebSocket · MessagePack</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-hc"><div class="hn-dlayer-name">Holochain Conductor</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↓</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-hclo"><div class="hn-dlayer-name">Rust hApp</div></div>
+        <div class="hn-dcol-note">Auto-maps Conductor data onto your class properties.</div>
+      </div>
+
+      <!-- Option 3: Audit -->
+      <div class="hn-diag-col">
+        <div class="hn-dcol-tag">Option 3</div>
+        <div class="hn-dcol-head">Audit + Version Control</div>
+        <div class="hn-dlayer l-app"><div class="hn-dlayer-name">Your .NET / Unity App</div><div class="hn-dlayer-sub">Game · Website · Service</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-user"><div class="hn-dlayer-name">Your HoloNET Entry Class</div><div class="hn-dlayer-sub">Extend &amp; customise</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-hn-hi" style="background:rgba(0,229,255,.16);border-color:rgba(0,229,255,.45)"><div class="hn-dlayer-name">HoloNETAuditEntryBaseClass</div><div class="hn-dlayer-sub">Audit · History · Versions</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-hn-hi"><div class="hn-dlayer-name">HoloNETEntryBaseClass</div><div class="hn-dlayer-sub">Load · Save · Delete</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-hn"><div class="hn-dlayer-name">HoloNETClient</div><div class="hn-dlayer-sub">WebSocket · MessagePack</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-hc"><div class="hn-dlayer-name">Holochain Conductor</div></div>
+        <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↓</div><div class="hn-dconn-line"></div></div>
+        <div class="hn-dlayer l-hclo"><div class="hn-dlayer-name">Rust hApp</div></div>
+        <div class="hn-dcol-note">Full audit trail and version history on every entry.</div>
+      </div>
+
+    </div>
+
+    <div class="hn-diag-key">
+      <div class="hn-dk-item"><div class="hn-dk-dot dg"></div>Your App / User-Defined Classes</div>
+      <div class="hn-dk-item"><div class="hn-dk-dot dc"></div>HoloNET Layer</div>
+      <div class="hn-dk-item"><div class="hn-dk-dot dv"></div>Holochain Layer</div>
+    </div>
+    <div class="hn-diag-note">All communication between HoloNETClient and the Holochain Conductor travels over <strong>WebSocket</strong>, encoded with <strong>MessagePack</strong>.</div>
+  </div>
+</section>
+
 <!-- ── QUICK START ── -->
 <section class="section" id="quickstart" style="background:rgba(255,255,255,.005)">
   <div class="section-kicker">GET STARTED</div>
@@ -544,10 +648,10 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
 
 <!-- ── INFOGRAPHICS ── -->
 <section class="section" style="background:rgba(255,255,255,.005)">
-  <div class="section-kicker">ARCHITECTURE</div>
-  <h2 class="section-title">THE HOLONET STACK</h2>
+  <div class="section-kicker">FULL ARCHITECTURE</div>
+  <h2 class="section-title">PACKAGE LAYER MAP</h2>
   <span class="section-line"></span>
-  <p class="section-sub">How the HoloNET toolkit stacks — from your .NET, Unity or Unreal app, down through the Client, ORM, Manager, HDK and HyperNET, into the Holochain Conductor &amp; DHT, and out to the wider OASIS Omniverse via the HoloOASIS bridge.</p>
+  <p class="section-sub">How the full HoloNET package suite stacks — from your .NET, Unity or Unreal app, down through the Client, ORM, Manager, HDK and HyperNET, into the Holochain Conductor &amp; DHT, and out to the wider OASIS Omniverse via the HoloOASIS bridge.</p>
   <div class="arch-wrap reveal">
     <svg viewBox="0 0 900 470" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:580px;display:block">
       <defs>
