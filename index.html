@@ -11,11 +11,11 @@
 <style>
 :root{
   --bg-deep:#030714;--bg-card:rgba(10,18,50,.75);--bg-card2:rgba(8,14,38,.9);
-  --cyan:#00e5ff;--violet:#8b5cf6;--gold:#f0a500;
+  --cyan:#3b82f6;--violet:#8b5cf6;--gold:#f0a500;
   --heading:#e8f4ff;--heading-sub:#a8c8f0;
   --text:#d0e4ff;--text-dim:#6a80a8;
-  --border:rgba(0,229,255,.12);--border-v:rgba(139,92,246,.2);
-  --glow:rgba(0,229,255,.15);--glow-v:rgba(139,92,246,.15);
+  --border:rgba(59,130,246,.12);--border-v:rgba(139,92,246,.2);
+  --glow:rgba(59,130,246,.15);--glow-v:rgba(139,92,246,.15);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -29,8 +29,8 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 .nav-links{display:flex;gap:28px;margin-left:auto}
 .nav-links a{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.12em;color:#a8bfd8;text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--cyan)}
-.nav-cta{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:var(--cyan);border:1px solid rgba(0,229,255,.3);border-radius:999px;padding:8px 18px;text-decoration:none;transition:background .2s,border-color .2s;white-space:nowrap}
-.nav-cta:hover{background:rgba(0,229,255,.08);border-color:rgba(0,229,255,.55)}
+.nav-cta{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:var(--cyan);border:1px solid rgba(59,130,246,.3);border-radius:999px;padding:8px 18px;text-decoration:none;transition:background .2s,border-color .2s;white-space:nowrap}
+.nav-cta:hover{background:rgba(59,130,246,.08);border-color:rgba(59,130,246,.55)}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto}
 .nav-hamburger span{display:block;width:22px;height:2px;background:var(--cyan);border-radius:2px}
 @media(max-width:800px){.nav{padding:0 20px}.nav-links{display:none}.nav-hamburger{display:flex}}
@@ -49,23 +49,23 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 .hero-kicker{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.28em;color:var(--cyan);margin-bottom:20px;opacity:.85}
 .hero-logo{margin-bottom:28px}
 .hero-title{font-family:'Orbitron',sans-serif;font-size:clamp(24px,4.5vw,52px);font-weight:900;letter-spacing:.05em;color:var(--heading);line-height:1.15;max-width:900px;animation:fadeUp .8s ease both}
-.hero-title span{color:var(--cyan);text-shadow:0 0 30px rgba(0,229,255,.4)}
+.hero-title span{color:var(--cyan);text-shadow:0 0 30px rgba(59,130,246,.4)}
 .hero-sub{font-size:clamp(15px,2vw,19px);color:#a8bfd8;max-width:700px;line-height:1.75;margin:22px auto 36px;animation:fadeUp .8s .15s ease both}
 .hero-badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;animation:fadeUp .8s .25s ease both}
-.hero-badge{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--cyan);background:rgba(0,229,255,.06);border:1px solid rgba(0,229,255,.2);border-radius:999px;padding:7px 16px}
+.hero-badge{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--cyan);background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.2);border-radius:999px;padding:7px 16px}
 .hero-badge.violet{color:var(--violet);background:rgba(139,92,246,.06);border-color:rgba(139,92,246,.25)}
 .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:fadeUp .8s .35s ease both}
 .btn-primary{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:.12em;color:#000;background:var(--cyan);border:none;border-radius:10px;padding:14px 30px;text-decoration:none;transition:filter .2s,transform .2s;display:inline-block}
 .btn-primary:hover{filter:brightness(1.15);transform:translateY(-2px)}
-.btn-secondary{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--cyan);background:transparent;border:2px solid rgba(0,229,255,.4);border-radius:10px;padding:13px 28px;text-decoration:none;transition:background .2s,border-color .2s,transform .2s;display:inline-block}
-.btn-secondary:hover{background:rgba(0,229,255,.08);border-color:rgba(0,229,255,.7);transform:translateY(-2px)}
+.btn-secondary{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--cyan);background:transparent;border:2px solid rgba(59,130,246,.4);border-radius:10px;padding:13px 28px;text-decoration:none;transition:background .2s,border-color .2s,transform .2s;display:inline-block}
+.btn-secondary:hover{background:rgba(59,130,246,.08);border-color:rgba(59,130,246,.7);transform:translateY(-2px)}
 .btn-violet{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--violet);background:transparent;border:2px solid rgba(139,92,246,.4);border-radius:10px;padding:13px 28px;text-decoration:none;transition:background .2s,border-color .2s,transform .2s;display:inline-block}
 .btn-violet:hover{background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.7);transform:translateY(-2px)}
 
 /* ── PACKAGE CARDS ── */
 .pkg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;max-width:1100px;margin:0 auto;width:100%}
 .pkg-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px 26px;display:flex;flex-direction:column;gap:12px;transition:transform .3s,border-color .3s,box-shadow .3s}
-.pkg-card:hover{transform:translateY(-5px);border-color:rgba(0,229,255,.3);box-shadow:0 16px 50px rgba(0,229,255,.08)}
+.pkg-card:hover{transform:translateY(-5px);border-color:rgba(59,130,246,.3);box-shadow:0 16px 50px rgba(59,130,246,.08)}
 .pkg-card.violet{border-color:var(--border-v)}
 .pkg-card.violet:hover{border-color:rgba(139,92,246,.4);box-shadow:0 16px 50px var(--glow-v)}
 .pkg-icon{width:44px;height:44px;display:flex;align-items:center;justify-content:center}
@@ -73,23 +73,23 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 .pkg-kicker.violet{color:var(--violet)}
 .pkg-title{font-family:'Orbitron',sans-serif;font-size:15px;font-weight:700;letter-spacing:.07em;color:var(--heading)}
 .pkg-desc{font-size:14px;color:#a8bfd8;line-height:1.65;flex:1}
-.pkg-link{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:var(--cyan);text-decoration:none;border:1px solid rgba(0,229,255,.22);border-radius:999px;padding:8px 16px;text-align:center;transition:background .2s,border-color .2s;align-self:flex-start}
-.pkg-link:hover{background:rgba(0,229,255,.08);border-color:rgba(0,229,255,.5)}
+.pkg-link{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:var(--cyan);text-decoration:none;border:1px solid rgba(59,130,246,.22);border-radius:999px;padding:8px 16px;text-align:center;transition:background .2s,border-color .2s;align-self:flex-start}
+.pkg-link:hover{background:rgba(59,130,246,.08);border-color:rgba(59,130,246,.5)}
 .pkg-link.violet{color:var(--violet);border-color:rgba(139,92,246,.3)}
 .pkg-link.violet:hover{background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.55)}
 
 /* ── FEATURE CARDS ── */
 .feat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;max-width:1100px;margin:0 auto}
 .feat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px 22px;transition:border-color .3s,transform .3s}
-.feat-card:hover{border-color:rgba(0,229,255,.28);transform:translateY(-3px)}
+.feat-card:hover{border-color:rgba(59,130,246,.28);transform:translateY(-3px)}
 .feat-icon{font-size:26px;margin-bottom:12px}
 .feat-kicker{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--cyan);margin-bottom:8px}
 .feat-title{font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--heading);margin-bottom:10px}
 .feat-desc{font-size:13px;color:#a8bfd8;line-height:1.6}
 
 /* ── CODE BLOCK ── */
-.code-wrap{background:rgba(5,10,28,.9);border:1px solid rgba(0,229,255,.15);border-radius:14px;overflow:hidden;max-width:800px;margin:0 auto}
-.code-header{display:flex;align-items:center;gap:8px;padding:12px 20px;background:rgba(0,229,255,.04);border-bottom:1px solid rgba(0,229,255,.1)}
+.code-wrap{background:rgba(5,10,28,.9);border:1px solid rgba(59,130,246,.15);border-radius:14px;overflow:hidden;max-width:800px;margin:0 auto}
+.code-header{display:flex;align-items:center;gap:8px;padding:12px 20px;background:rgba(59,130,246,.04);border-bottom:1px solid rgba(59,130,246,.1)}
 .code-dot{width:10px;height:10px;border-radius:50%}
 .code-lang{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.15em;color:#a8bfd8;margin-left:auto}
 pre{padding:24px 28px;overflow-x:auto;font-family:'Share Tech Mono',monospace;font-size:13px;line-height:1.75;color:#c8e0ff}
@@ -98,11 +98,11 @@ pre{padding:24px 28px;overflow-x:auto;font-family:'Share Tech Mono',monospace;fo
 /* ── INFOGRAPHIC ── */
 .infographic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1000px;margin:0 auto}
 .infographic-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:zoom-in;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative}
-.infographic-card:hover{transform:translateY(-4px);border-color:rgba(0,229,255,.35);box-shadow:0 12px 40px rgba(0,229,255,.12)}
+.infographic-card:hover{transform:translateY(-4px);border-color:rgba(59,130,246,.35);box-shadow:0 12px 40px rgba(59,130,246,.12)}
 .infographic-card img{width:100%;height:260px;object-fit:cover;object-position:top;display:block}
 .infographic-card--hero{grid-column:1/-1}
 .infographic-card--hero img{height:auto;object-fit:contain}
-.infographic-label{padding:14px 16px;border-top:1px solid rgba(0,229,255,.08)}
+.infographic-label{padding:14px 16px;border-top:1px solid rgba(59,130,246,.08)}
 .infographic-tag{display:block;font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--cyan);margin-bottom:4px}
 .infographic-title{display:block;font-family:'Orbitron',sans-serif;font-size:12px;letter-spacing:.06em;color:var(--heading-sub);line-height:1.4}
 #lightbox.open{display:flex!important;animation:fadeIn .2s ease}
@@ -110,11 +110,11 @@ pre{padding:24px 28px;overflow-x:auto;font-family:'Share Tech Mono',monospace;fo
 /* ── NUGET TABLE ── */
 .nuget-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:1100px;margin:0 auto}
 .nuget-item{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;display:flex;align-items:center;gap:14px;transition:border-color .3s}
-.nuget-item:hover{border-color:rgba(0,229,255,.28)}
+.nuget-item:hover{border-color:rgba(59,130,246,.28)}
 .nuget-item-name{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text);flex:1;min-width:0;line-height:1.4;word-break:break-all;overflow-wrap:break-word}
 .nuget-item-name span{display:block;font-size:10px;color:#a8bfd8;margin-top:3px}
-.nuget-item a{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--cyan);text-decoration:none;white-space:nowrap;border:1px solid rgba(0,229,255,.2);border-radius:999px;padding:5px 12px;transition:background .2s}
-.nuget-item a:hover{background:rgba(0,229,255,.08)}
+.nuget-item a{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--cyan);text-decoration:none;white-space:nowrap;border:1px solid rgba(59,130,246,.2);border-radius:999px;padding:5px 12px;transition:background .2s}
+.nuget-item a:hover{background:rgba(59,130,246,.08)}
 
 /* ── WAYS GRID ── */
 .ways-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1000px;margin:0 auto}
@@ -124,7 +124,7 @@ pre{padding:24px 28px;overflow-x:auto;font-family:'Share Tech Mono',monospace;fo
 .way-desc{font-size:14px;color:#a8bfd8;line-height:1.65}
 
 /* ── HYPERNET BAND ── */
-.hypernet-band{background:linear-gradient(135deg,rgba(139,92,246,.07) 0%,rgba(0,229,255,.04) 100%);border:1px solid rgba(139,92,246,.2);border-radius:20px;padding:56px 48px;max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hypernet-band{background:linear-gradient(135deg,rgba(139,92,246,.07) 0%,rgba(59,130,246,.04) 100%);border:1px solid rgba(139,92,246,.2);border-radius:20px;padding:56px 48px;max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .hypernet-kicker{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.22em;color:var(--violet);margin-bottom:14px}
 .hypernet-title{font-family:'Orbitron',sans-serif;font-size:clamp(20px,3vw,32px);font-weight:900;letter-spacing:.05em;color:var(--heading);line-height:1.2;margin-bottom:16px}
 .hypernet-title span{color:var(--violet)}
@@ -135,25 +135,25 @@ pre{padding:24px 28px;overflow-x:auto;font-family:'Share Tech Mono',monospace;fo
 .hypernet-stat-label{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.15em;color:#a8bfd8;margin-top:6px}
 
 /* ── OASIS BAND ── */
-.oasis-band{background:linear-gradient(135deg,rgba(0,229,255,.04),rgba(8,14,38,.9));border:1px solid var(--border);border-radius:20px;padding:48px;max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.oasis-band{background:linear-gradient(135deg,rgba(59,130,246,.04),rgba(8,14,38,.9));border:1px solid var(--border);border-radius:20px;padding:48px;max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .oasis-body{font-size:15px;color:#a8bfd8;line-height:1.8;margin-bottom:20px}
 .oasis-pill-row{display:flex;flex-wrap:wrap;gap:8px}
 .oasis-pill{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.07em;color:var(--text);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:5px 12px;background:rgba(255,255,255,.03)}
 
 /* ── DOC LINKS ── */
 .doc-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:32px auto 0}
-.doc-link{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.12em;color:var(--cyan);text-decoration:none;border:1px solid rgba(0,229,255,.2);border-radius:999px;padding:9px 18px;transition:background .2s,border-color .2s}
-.doc-link:hover{background:rgba(0,229,255,.08);border-color:rgba(0,229,255,.45)}
+.doc-link{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.12em;color:var(--cyan);text-decoration:none;border:1px solid rgba(59,130,246,.2);border-radius:999px;padding:9px 18px;transition:background .2s,border-color .2s}
+.doc-link:hover{background:rgba(59,130,246,.08);border-color:rgba(59,130,246,.45)}
 
 /* ── FOOTER ── */
 .footer{position:relative;z-index:2;padding:60px 40px 40px;border-top:1px solid rgba(255,255,255,.06);max-width:1180px;margin:0 auto}
 .footer-brand{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:900;letter-spacing:.12em;color:var(--cyan);margin-bottom:8px}
-.footer-tagline{font-size:14px;color:#a8bfd8;margin-bottom:80px;max-width:none}
+.footer-tagline{font-size:14px;color:#a8bfd8;margin-bottom:140px;max-width:none}
 .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:40px}
 .footer-col-title{font-family:'Orbitron',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;color:var(--cyan);margin-bottom:14px}
 .footer-col ul{list-style:none;display:grid;gap:9px}
 .footer-col ul li a{font-size:14px;color:#a8bfd8;text-decoration:none;transition:color .2s}
-.footer a:hover{color:var(--cyan);filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(0,229,255,.8)) drop-shadow(0 0 40px rgba(0,229,255,.4))}
+.footer a:hover{color:var(--cyan);filter:drop-shadow(0 0 8px rgba(59,130,246,1)) drop-shadow(0 0 20px rgba(59,130,246,.8)) drop-shadow(0 0 40px rgba(59,130,246,.4))}
 .footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid rgba(255,255,255,.05);font-size:13px;color:#a8bfd8}
 .footer-socials{display:flex;gap:14px}
 .footer-social{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:#a8bfd8;text-decoration:none;transition:color .2s}
@@ -166,13 +166,13 @@ pre{padding:24px 28px;overflow-x:auto;font-family:'Share Tech Mono',monospace;fo
 .hero-logo{animation:floaty 7s ease-in-out infinite}
 
 /* ── ARCHITECTURE DIAGRAM ── */
-.arch-wrap{background:var(--bg-card);border:1px solid var(--border-v);border-radius:16px;padding:28px;max-width:1000px;margin:0 auto;overflow-x:auto;box-shadow:0 16px 50px rgba(0,229,255,.06)}
+.arch-wrap{background:var(--bg-card);border:1px solid var(--border-v);border-radius:16px;padding:28px;max-width:1000px;margin:0 auto;overflow-x:auto;box-shadow:0 16px 50px rgba(59,130,246,.06)}
 .arch-eq{display:flex;align-items:center;justify-content:center;gap:14px;margin:26px auto 0;flex-wrap:wrap;max-width:1000px}
 .arch-eq-pill{font-family:'Orbitron',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;padding:8px 15px;border-radius:6px}
-.arch-eq-pill.cyan{background:rgba(0,229,255,.1);color:var(--cyan);border:1px solid rgba(0,229,255,.32)}
+.arch-eq-pill.cyan{background:rgba(59,130,246,.1);color:var(--cyan);border:1px solid rgba(59,130,246,.32)}
 .arch-eq-pill.violet{background:rgba(139,92,246,.12);color:var(--violet);border:1px solid rgba(139,92,246,.35)}
 .arch-eq-op{font-family:'Orbitron',sans-serif;font-size:16px;color:#a8bfd8;font-weight:700}
-.arch-eq-result{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:900;color:var(--cyan);letter-spacing:.14em;text-shadow:0 0 12px rgba(0,229,255,.5)}
+.arch-eq-result{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:900;color:var(--cyan);letter-spacing:.14em;text-shadow:0 0 12px rgba(59,130,246,.5)}
 
 /* ── ANIMATIONS ── */
 footer{--text-dim:#a8bfd8}
@@ -183,10 +183,10 @@ footer{--text-dim:#a8bfd8}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
-a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(0,229,255,.8)) drop-shadow(0 0 40px rgba(0,229,255,.4))}
+a:hover{filter:drop-shadow(0 0 8px rgba(59,130,246,1)) drop-shadow(0 0 20px rgba(59,130,246,.8)) drop-shadow(0 0 40px rgba(59,130,246,.4))}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .foot-bottom p{color:#a8bfd8;font-size:.82rem}
-.foot-bottom a{color:#a8bfd8;text-decoration:none}.foot-bottom a:hover{color:var(--cyan);filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(0,229,255,.8)) drop-shadow(0 0 40px rgba(0,229,255,.4))}
+.foot-bottom a{color:#a8bfd8;text-decoration:none}.foot-bottom a:hover{color:var(--cyan);filter:drop-shadow(0 0 8px rgba(59,130,246,1)) drop-shadow(0 0 20px rgba(59,130,246,.8)) drop-shadow(0 0 40px rgba(59,130,246,.4))}
 </style>
 </head>
 <body>
@@ -197,8 +197,8 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
 <nav class="nav">
   <a href="#" class="nav-brand">
     <svg width="22" height="22" viewBox="0 0 54 54" fill="none">
-      <polygon points="42.6,18 27,9 11.4,18 11.4,36 27,45 42.6,36" stroke="#00e5ff" stroke-width="1.4" fill="none"/>
-      <circle cx="27" cy="27" r="3" fill="#00e5ff"/>
+      <polygon points="42.6,18 27,9 11.4,18 11.4,36 27,45 42.6,36" stroke="#3b82f6" stroke-width="1.4" fill="none"/>
+      <circle cx="27" cy="27" r="3" fill="#3b82f6"/>
     </svg>
     HOLONET
   </a>
@@ -220,14 +220,14 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
   <svg class="hero-bg" viewBox="0 0 900 900" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs>
       <radialGradient id="hb-glow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#00e5ff" stop-opacity=".12"/>
+        <stop offset="0%" stop-color="#3b82f6" stop-opacity=".12"/>
         <stop offset="100%" stop-color="#030714" stop-opacity="0"/>
       </radialGradient>
       <filter id="hb-soft"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
       <!-- agent node (Holochain peer) -->
       <g id="agent">
-        <polygon points="0,-15 13,-7.5 13,7.5 0,15 -13,7.5 -13,-7.5" fill="rgba(0,229,255,.08)" stroke="#00e5ff" stroke-width="1.2"/>
-        <circle cx="0" cy="0" r="3.2" fill="#00e5ff"/>
+        <polygon points="0,-15 13,-7.5 13,7.5 0,15 -13,7.5 -13,-7.5" fill="rgba(59,130,246,.08)" stroke="#3b82f6" stroke-width="1.2"/>
+        <circle cx="0" cy="0" r="3.2" fill="#3b82f6"/>
       </g>
       <g id="agentv">
         <polygon points="0,-15 13,-7.5 13,7.5 0,15 -13,7.5 -13,-7.5" fill="rgba(139,92,246,.1)" stroke="#8b5cf6" stroke-width="1.2"/>
@@ -241,23 +241,23 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
   </svg>
   <!-- <div class="hero-kicker">HOLONET · v3.0.5 · PART OF THE OASIS OMNIVERSE</div> -->
   <div class="hero-logo">
-    <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 0 18px rgba(0,229,255,.4))">
-      <polygon points="86,36 55,18 24,36 24,72 55,90 86,72" stroke="#00e5ff" stroke-width="1.5" fill="none" opacity="0.9" style="animation:spin 40s linear infinite;transform-origin:55px 55px"/>
-      <polygon points="75,42 55,31 35,42 35,65 55,76 75,65" stroke="#00e5ff" stroke-width="0.8" fill="none" opacity="0.45"/>
+    <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 0 18px rgba(59,130,246,.4))">
+      <polygon points="86,36 55,18 24,36 24,72 55,90 86,72" stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.9" style="animation:spin 40s linear infinite;transform-origin:55px 55px"/>
+      <polygon points="75,42 55,31 35,42 35,65 55,76 75,65" stroke="#3b82f6" stroke-width="0.8" fill="none" opacity="0.45"/>
       <polygon points="67,47 55,40 43,47 43,61 55,68 67,61" stroke="#8b5cf6" stroke-width="0.7" fill="none" opacity="0.5"/>
-      <line x1="55" y1="55" x2="86" y2="36" stroke="#00e5ff" stroke-width="0.5" opacity="0.25"/>
-      <line x1="55" y1="55" x2="55" y2="18" stroke="#00e5ff" stroke-width="0.5" opacity="0.25"/>
-      <line x1="55" y1="55" x2="24" y2="36" stroke="#00e5ff" stroke-width="0.5" opacity="0.25"/>
-      <line x1="55" y1="55" x2="24" y2="72" stroke="#00e5ff" stroke-width="0.5" opacity="0.25"/>
-      <line x1="55" y1="55" x2="55" y2="90" stroke="#00e5ff" stroke-width="0.5" opacity="0.25"/>
-      <line x1="55" y1="55" x2="86" y2="72" stroke="#00e5ff" stroke-width="0.5" opacity="0.25"/>
-      <circle cx="55" cy="55" r="5" fill="#00e5ff" style="animation:pulse 2.5s ease-in-out infinite"/>
-      <circle cx="86" cy="36" r="2.5" fill="#00e5ff" opacity="0.7"/>
-      <circle cx="55" cy="18" r="2.5" fill="#00e5ff" opacity="0.7"/>
-      <circle cx="24" cy="36" r="2.5" fill="#00e5ff" opacity="0.7"/>
-      <circle cx="24" cy="72" r="2.5" fill="#00e5ff" opacity="0.7"/>
-      <circle cx="55" cy="90" r="2.5" fill="#00e5ff" opacity="0.7"/>
-      <circle cx="86" cy="72" r="2.5" fill="#00e5ff" opacity="0.7"/>
+      <line x1="55" y1="55" x2="86" y2="36" stroke="#3b82f6" stroke-width="0.5" opacity="0.25"/>
+      <line x1="55" y1="55" x2="55" y2="18" stroke="#3b82f6" stroke-width="0.5" opacity="0.25"/>
+      <line x1="55" y1="55" x2="24" y2="36" stroke="#3b82f6" stroke-width="0.5" opacity="0.25"/>
+      <line x1="55" y1="55" x2="24" y2="72" stroke="#3b82f6" stroke-width="0.5" opacity="0.25"/>
+      <line x1="55" y1="55" x2="55" y2="90" stroke="#3b82f6" stroke-width="0.5" opacity="0.25"/>
+      <line x1="55" y1="55" x2="86" y2="72" stroke="#3b82f6" stroke-width="0.5" opacity="0.25"/>
+      <circle cx="55" cy="55" r="5" fill="#3b82f6" style="animation:pulse 2.5s ease-in-out infinite"/>
+      <circle cx="86" cy="36" r="2.5" fill="#3b82f6" opacity="0.7"/>
+      <circle cx="55" cy="18" r="2.5" fill="#3b82f6" opacity="0.7"/>
+      <circle cx="24" cy="36" r="2.5" fill="#3b82f6" opacity="0.7"/>
+      <circle cx="24" cy="72" r="2.5" fill="#3b82f6" opacity="0.7"/>
+      <circle cx="55" cy="90" r="2.5" fill="#3b82f6" opacity="0.7"/>
+      <circle cx="86" cy="72" r="2.5" fill="#3b82f6" opacity="0.7"/>
       <circle cx="55" cy="55" r="22" stroke="#8b5cf6" stroke-width="0.5" fill="none" opacity="0.2" stroke-dasharray="4 6"/>
     </svg>
   </div>
@@ -288,8 +288,8 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
     <div class="pkg-card reveal">
       <div class="pkg-icon">
         <svg width="36" height="36" viewBox="0 0 54 54" fill="none">
-          <polygon points="42.6,18 27,9 11.4,18 11.4,36 27,45 42.6,36" stroke="#00e5ff" stroke-width="1.3" fill="none"/>
-          <circle cx="27" cy="27" r="3" fill="#00e5ff"/>
+          <polygon points="42.6,18 27,9 11.4,18 11.4,36 27,45 42.6,36" stroke="#3b82f6" stroke-width="1.3" fill="none"/>
+          <circle cx="27" cy="27" r="3" fill="#3b82f6"/>
         </svg>
       </div>
       <div class="pkg-kicker">CORE · CLIENT</div>
@@ -301,11 +301,11 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
     <div class="pkg-card reveal">
       <div class="pkg-icon">
         <svg width="36" height="36" viewBox="0 0 54 54" fill="none">
-          <rect x="10" y="14" width="34" height="26" rx="4" stroke="#00e5ff" stroke-width="1.2" fill="none"/>
-          <line x1="10" y1="22" x2="44" y2="22" stroke="#00e5ff" stroke-width="0.7" opacity="0.4"/>
-          <line x1="10" y1="30" x2="44" y2="30" stroke="#00e5ff" stroke-width="0.7" opacity="0.4"/>
-          <circle cx="18" cy="18" r="2" fill="#00e5ff" opacity="0.6"/>
-          <circle cx="27" cy="18" r="2" fill="#00e5ff" opacity="0.6"/>
+          <rect x="10" y="14" width="34" height="26" rx="4" stroke="#3b82f6" stroke-width="1.2" fill="none"/>
+          <line x1="10" y1="22" x2="44" y2="22" stroke="#3b82f6" stroke-width="0.7" opacity="0.4"/>
+          <line x1="10" y1="30" x2="44" y2="30" stroke="#3b82f6" stroke-width="0.7" opacity="0.4"/>
+          <circle cx="18" cy="18" r="2" fill="#3b82f6" opacity="0.6"/>
+          <circle cx="27" cy="18" r="2" fill="#3b82f6" opacity="0.6"/>
         </svg>
       </div>
       <div class="pkg-kicker">DATA · ORM</div>
@@ -317,12 +317,12 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
     <div class="pkg-card reveal">
       <div class="pkg-icon">
         <svg width="36" height="36" viewBox="0 0 54 54" fill="none">
-          <rect x="8" y="10" width="38" height="28" rx="4" stroke="#00e5ff" stroke-width="1.2" fill="none"/>
-          <rect x="14" y="16" width="10" height="8" rx="2" stroke="#00e5ff" stroke-width="0.8" fill="none" opacity="0.5"/>
-          <rect x="30" y="16" width="10" height="8" rx="2" stroke="#00e5ff" stroke-width="0.8" fill="none" opacity="0.5"/>
-          <line x1="14" y1="30" x2="40" y2="30" stroke="#00e5ff" stroke-width="0.7" opacity="0.4"/>
-          <line x1="22" y1="38" x2="32" y2="38" stroke="#00e5ff" stroke-width="1.2"/>
-          <line x1="27" y1="38" x2="27" y2="44" stroke="#00e5ff" stroke-width="1.2"/>
+          <rect x="8" y="10" width="38" height="28" rx="4" stroke="#3b82f6" stroke-width="1.2" fill="none"/>
+          <rect x="14" y="16" width="10" height="8" rx="2" stroke="#3b82f6" stroke-width="0.8" fill="none" opacity="0.5"/>
+          <rect x="30" y="16" width="10" height="8" rx="2" stroke="#3b82f6" stroke-width="0.8" fill="none" opacity="0.5"/>
+          <line x1="14" y1="30" x2="40" y2="30" stroke="#3b82f6" stroke-width="0.7" opacity="0.4"/>
+          <line x1="22" y1="38" x2="32" y2="38" stroke="#3b82f6" stroke-width="1.2"/>
+          <line x1="27" y1="38" x2="27" y2="44" stroke="#3b82f6" stroke-width="1.2"/>
         </svg>
       </div>
       <div class="pkg-kicker">UI · MANAGER</div>
@@ -334,10 +334,10 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
     <div class="pkg-card reveal">
       <div class="pkg-icon">
         <svg width="36" height="36" viewBox="0 0 54 54" fill="none">
-          <polygon points="27,6 46,17 46,37 27,48 8,37 8,17" stroke="#00e5ff" stroke-width="1.2" fill="none"/>
-          <polygon points="27,15 38,21 38,33 27,39 16,33 16,21" stroke="#00e5ff" stroke-width="0.7" fill="none" opacity="0.4"/>
-          <circle cx="27" cy="27" r="4" fill="none" stroke="#00e5ff" stroke-width="1"/>
-          <circle cx="27" cy="27" r="1.5" fill="#00e5ff"/>
+          <polygon points="27,6 46,17 46,37 27,48 8,37 8,17" stroke="#3b82f6" stroke-width="1.2" fill="none"/>
+          <polygon points="27,15 38,21 38,33 27,39 16,33 16,21" stroke="#3b82f6" stroke-width="0.7" fill="none" opacity="0.4"/>
+          <circle cx="27" cy="27" r="4" fill="none" stroke="#3b82f6" stroke-width="1"/>
+          <circle cx="27" cy="27" r="1.5" fill="#3b82f6"/>
         </svg>
       </div>
       <div class="pkg-kicker">FULL KIT · HDK</div>
@@ -366,14 +366,14 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
     <div class="pkg-card reveal">
       <div class="pkg-icon">
         <svg width="36" height="36" viewBox="0 0 54 54" fill="none">
-          <rect x="8" y="8" width="16" height="16" rx="3" stroke="#00e5ff" stroke-width="1.1" fill="none" opacity="0.7"/>
-          <rect x="30" y="8" width="16" height="16" rx="3" stroke="#00e5ff" stroke-width="1.1" fill="none" opacity="0.7"/>
-          <rect x="8" y="30" width="16" height="16" rx="3" stroke="#00e5ff" stroke-width="1.1" fill="none" opacity="0.7"/>
-          <rect x="30" y="30" width="16" height="16" rx="3" stroke="#00e5ff" stroke-width="1.1" fill="none" opacity="0.4"/>
-          <text x="11" y="20" font-family="monospace" font-size="8" fill="#00e5ff" opacity="0.8">B</text>
-          <text x="33" y="20" font-family="monospace" font-size="8" fill="#00e5ff" opacity="0.8">M</text>
-          <text x="11" y="42" font-family="monospace" font-size="8" fill="#00e5ff" opacity="0.8">W</text>
-          <text x="33" y="42" font-family="monospace" font-size="6" fill="#00e5ff" opacity="0.6">UNO</text>
+          <rect x="8" y="8" width="16" height="16" rx="3" stroke="#3b82f6" stroke-width="1.1" fill="none" opacity="0.7"/>
+          <rect x="30" y="8" width="16" height="16" rx="3" stroke="#3b82f6" stroke-width="1.1" fill="none" opacity="0.7"/>
+          <rect x="8" y="30" width="16" height="16" rx="3" stroke="#3b82f6" stroke-width="1.1" fill="none" opacity="0.7"/>
+          <rect x="30" y="30" width="16" height="16" rx="3" stroke="#3b82f6" stroke-width="1.1" fill="none" opacity="0.4"/>
+          <text x="11" y="20" font-family="monospace" font-size="8" fill="#3b82f6" opacity="0.8">B</text>
+          <text x="33" y="20" font-family="monospace" font-size="8" fill="#3b82f6" opacity="0.8">M</text>
+          <text x="11" y="42" font-family="monospace" font-size="8" fill="#3b82f6" opacity="0.8">W</text>
+          <text x="33" y="42" font-family="monospace" font-size="6" fill="#3b82f6" opacity="0.6">UNO</text>
         </svg>
       </div>
       <div class="pkg-kicker">TEMPLATES</div>
@@ -479,7 +479,7 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
     .hn-diag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
     .hn-diag-col{display:flex;flex-direction:column;gap:0;padding:0 10px}
     .hn-diag-col:not(:last-child){border-right:1px solid rgba(255,255,255,.05)}
-    .hn-dcol-tag{font-size:9px;font-weight:700;letter-spacing:.2em;text-align:center;color:rgba(0,229,255,.5);text-transform:uppercase;padding:0 0 6px}
+    .hn-dcol-tag{font-size:9px;font-weight:700;letter-spacing:.2em;text-align:center;color:rgba(59,130,246,.5);text-transform:uppercase;padding:0 0 6px}
     .hn-dcol-head{font-size:10px;font-weight:700;letter-spacing:.14em;text-align:center;color:var(--cyan);text-transform:uppercase;padding:0 0 10px}
     .hn-dlayer{border-radius:6px;padding:9px 12px;text-align:center}
     .hn-dlayer-name{font-size:11.5px;font-weight:600;letter-spacing:.03em;line-height:1.3}
@@ -490,8 +490,8 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
     .hn-dconn-lbl{font-family:'Share Tech Mono',monospace;font-size:8px;color:rgba(255,255,255,.28);letter-spacing:.07em;text-align:center;padding:0 4px}
     .hn-dlayer.l-app{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.28);color:#86efac}
     .hn-dlayer.l-user{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);color:#86efac}
-    .hn-dlayer.l-hn-hi{background:rgba(0,229,255,.12);border:1px solid rgba(0,229,255,.38);color:#67e8f9}
-    .hn-dlayer.l-hn{background:rgba(0,229,255,.07);border:1px solid rgba(0,229,255,.24);color:#67e8f9}
+    .hn-dlayer.l-hn-hi{background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.38);color:#67e8f9}
+    .hn-dlayer.l-hn{background:rgba(59,130,246,.07);border:1px solid rgba(59,130,246,.24);color:#67e8f9}
     .hn-dlayer.l-hc{background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.28);color:#c4b5fd}
     .hn-dlayer.l-hclo{background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.18);color:#c4b5fd}
     .hn-dcol-note{margin-top:12px;padding:8px 10px;background:rgba(255,255,255,.03);border-radius:6px;font-size:9.5px;color:#a8bfd8;line-height:1.5;text-align:center;border:1px solid rgba(255,255,255,.06)}
@@ -499,10 +499,10 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
     .hn-dk-item{display:flex;align-items:center;gap:7px;font-size:11px;color:#a8bfd8}
     .hn-dk-dot{width:11px;height:11px;border-radius:3px;flex-shrink:0}
     .hn-dk-dot.dg{background:rgba(34,197,94,.2);border:1px solid rgba(34,197,94,.45)}
-    .hn-dk-dot.dc{background:rgba(0,229,255,.18);border:1px solid rgba(0,229,255,.45)}
+    .hn-dk-dot.dc{background:rgba(59,130,246,.18);border:1px solid rgba(59,130,246,.45)}
     .hn-dk-dot.dv{background:rgba(139,92,246,.2);border:1px solid rgba(139,92,246,.45)}
-    .hn-diag-note{background:rgba(0,229,255,.04);border:1px solid rgba(0,229,255,.12);border-radius:8px;padding:11px 16px;font-size:11px;color:#a8bfd8;text-align:center;line-height:1.6}
-    .hn-diag-note strong{color:#00e5ff}
+    .hn-diag-note{background:rgba(59,130,246,.04);border:1px solid rgba(59,130,246,.12);border-radius:8px;padding:11px 16px;font-size:11px;color:#a8bfd8;text-align:center;line-height:1.6}
+    .hn-diag-note strong{color:#3b82f6}
   </style>
 
   <div class="hn-diag-wrap reveal">
@@ -548,7 +548,7 @@ a:hover{filter:drop-shadow(0 0 8px rgba(0,229,255,1)) drop-shadow(0 0 20px rgba(
         <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
         <div class="hn-dlayer l-user"><div class="hn-dlayer-name">Your HoloNET Entry Class</div><div class="hn-dlayer-sub">Extend &amp; customise</div></div>
         <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
-        <div class="hn-dlayer l-hn-hi" style="background:rgba(0,229,255,.16);border-color:rgba(0,229,255,.45)"><div class="hn-dlayer-name">HoloNETAuditEntryBaseClass</div><div class="hn-dlayer-sub">Audit · History · Versions</div></div>
+        <div class="hn-dlayer l-hn-hi" style="background:rgba(59,130,246,.16);border-color:rgba(59,130,246,.45)"><div class="hn-dlayer-name">HoloNETAuditEntryBaseClass</div><div class="hn-dlayer-sub">Audit · History · Versions</div></div>
         <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
         <div class="hn-dlayer l-hn-hi"><div class="hn-dlayer-name">HoloNETEntryBaseClass</div><div class="hn-dlayer-sub">Load · Save · Delete</div></div>
         <div class="hn-dconn"><div class="hn-dconn-line"></div><div class="hn-dconn-arrow">↕</div><div class="hn-dconn-line"></div></div>
@@ -662,45 +662,45 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
       </defs>
 
       <!-- ═══ APP TIER ═══ -->
-      <rect x="15" y="15" width="870" height="64" rx="6" fill="rgba(0,229,255,.06)" stroke="rgba(0,229,255,.3)" stroke-width="1"/>
-      <text x="30" y="35" font-family="Share Tech Mono,monospace" font-size="8" fill="rgba(0,229,255,.6)" letter-spacing="1.5">YOUR APP</text>
-      <text x="450" y="42" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="14" fill="#00e5ff" font-weight="700">YOUR .NET · UNITY · UNREAL · BLAZOR APP</text>
+      <rect x="15" y="15" width="870" height="64" rx="6" fill="rgba(59,130,246,.06)" stroke="rgba(59,130,246,.3)" stroke-width="1"/>
+      <text x="30" y="35" font-family="Share Tech Mono,monospace" font-size="8" fill="rgba(59,130,246,.6)" letter-spacing="1.5">YOUR APP</text>
+      <text x="450" y="42" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="14" fill="#3b82f6" font-weight="700">YOUR .NET · UNITY · UNREAL · BLAZOR APP</text>
       <text x="450" y="64" text-anchor="middle" font-family="Share Tech Mono,monospace" font-size="9.5" fill="#a8bfd8">C# — PC · Mac · Linux · iOS · Android · Console · VR / AR / XR · Web</text>
 
       <!-- connector -->
-      <line x1="450" y1="79" x2="450" y2="120" stroke="rgba(0,229,255,.45)" stroke-width="1.2" stroke-dasharray="3,2"/>
-      <polygon points="446,118 450,126 454,118" fill="rgba(0,229,255,.6)"/>
-      <text x="468" y="103" font-family="Share Tech Mono,monospace" font-size="10" fill="rgba(0,229,255,.7)">C# API calls ▾</text>
-      <circle r="3" fill="#00e5ff" opacity=".85"><animateMotion dur="1.6s" repeatCount="indefinite" path="M450,79 L450,118"/></circle>
+      <line x1="450" y1="79" x2="450" y2="120" stroke="rgba(59,130,246,.45)" stroke-width="1.2" stroke-dasharray="3,2"/>
+      <polygon points="446,118 450,126 454,118" fill="rgba(59,130,246,.6)"/>
+      <text x="468" y="103" font-family="Share Tech Mono,monospace" font-size="10" fill="rgba(59,130,246,.7)">C# API calls ▾</text>
+      <circle r="3" fill="#3b82f6" opacity=".85"><animateMotion dur="1.6s" repeatCount="indefinite" path="M450,79 L450,118"/></circle>
 
       <!-- ═══ HOLONET TOOLKIT ═══ -->
-      <rect x="15" y="128" width="870" height="110" rx="7" fill="rgba(0,229,255,.12)" stroke="#00e5ff" stroke-width="1.5" filter="url(#hs-glow)"/>
-      <text x="30" y="146" font-family="Share Tech Mono,monospace" font-size="8" fill="rgba(0,229,255,.55)" letter-spacing="1.5">.NET HOLOCHAIN DEVELOPMENT TOOLKIT</text>
-      <text x="450" y="166" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="17" fill="#00e5ff" font-weight="700" letter-spacing="2">HOLONET</text>
+      <rect x="15" y="128" width="870" height="110" rx="7" fill="rgba(59,130,246,.12)" stroke="#3b82f6" stroke-width="1.5" filter="url(#hs-glow)"/>
+      <text x="30" y="146" font-family="Share Tech Mono,monospace" font-size="8" fill="rgba(59,130,246,.55)" letter-spacing="1.5">.NET HOLOCHAIN DEVELOPMENT TOOLKIT</text>
+      <text x="450" y="166" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="17" fill="#3b82f6" font-weight="700" letter-spacing="2">HOLONET</text>
       <text x="450" y="186" text-anchor="middle" font-family="Share Tech Mono,monospace" font-size="9.5" fill="#a8bfd8">The complete .NET &amp; Unity client + dev kit for Holochain — async/event, zero-boilerplate CRUD</text>
       <!-- 5 chips -->
       <g font-family="Share Tech Mono,monospace" font-size="10" text-anchor="middle">
-        <rect x="43" y="202" width="150" height="24" rx="5" fill="rgba(0,229,255,.1)" stroke="rgba(0,229,255,.3)"/><text x="118" y="218" fill="#00e5ff">CLIENT</text>
-        <rect x="209" y="202" width="150" height="24" rx="5" fill="rgba(0,229,255,.1)" stroke="rgba(0,229,255,.3)"/><text x="284" y="218" fill="#00e5ff">ORM</text>
-        <rect x="375" y="202" width="150" height="24" rx="5" fill="rgba(0,229,255,.1)" stroke="rgba(0,229,255,.3)"/><text x="450" y="218" fill="#00e5ff">MANAGER</text>
-        <rect x="541" y="202" width="150" height="24" rx="5" fill="rgba(0,229,255,.1)" stroke="rgba(0,229,255,.3)"/><text x="616" y="218" fill="#00e5ff">HDK</text>
+        <rect x="43" y="202" width="150" height="24" rx="5" fill="rgba(59,130,246,.1)" stroke="rgba(59,130,246,.3)"/><text x="118" y="218" fill="#3b82f6">CLIENT</text>
+        <rect x="209" y="202" width="150" height="24" rx="5" fill="rgba(59,130,246,.1)" stroke="rgba(59,130,246,.3)"/><text x="284" y="218" fill="#3b82f6">ORM</text>
+        <rect x="375" y="202" width="150" height="24" rx="5" fill="rgba(59,130,246,.1)" stroke="rgba(59,130,246,.3)"/><text x="450" y="218" fill="#3b82f6">MANAGER</text>
+        <rect x="541" y="202" width="150" height="24" rx="5" fill="rgba(59,130,246,.1)" stroke="rgba(59,130,246,.3)"/><text x="616" y="218" fill="#3b82f6">HDK</text>
         <rect x="707" y="202" width="150" height="24" rx="5" fill="rgba(139,92,246,.14)" stroke="rgba(139,92,246,.4)"/><text x="782" y="218" fill="#a78bfa">HYPERNET</text>
       </g>
 
       <!-- connectors to bottom -->
-      <line x1="225" y1="238" x2="225" y2="278" stroke="rgba(0,229,255,.4)" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="225" y1="238" x2="225" y2="278" stroke="rgba(59,130,246,.4)" stroke-width="1" stroke-dasharray="3,2"/>
       <line x1="675" y1="238" x2="675" y2="278" stroke="rgba(139,92,246,.4)" stroke-width="1" stroke-dasharray="3,2"/>
-      <polygon points="221,275 225,283 229,275" fill="rgba(0,229,255,.5)"/>
+      <polygon points="221,275 225,283 229,275" fill="rgba(59,130,246,.5)"/>
       <polygon points="671,275 675,283 679,275" fill="rgba(139,92,246,.5)"/>
       <text x="450" y="262" text-anchor="middle" font-family="Share Tech Mono,monospace" font-size="10" fill="rgba(168,191,216,.7)">WebSocket · zome calls · provider bridge</text>
-      <circle r="3" fill="#00e5ff" opacity=".85"><animateMotion dur="1.5s" repeatCount="indefinite" path="M225,238 L225,275"/></circle>
+      <circle r="3" fill="#3b82f6" opacity=".85"><animateMotion dur="1.5s" repeatCount="indefinite" path="M225,238 L225,275"/></circle>
       <circle r="3" fill="#8b5cf6" opacity=".85"><animateMotion dur="1.5s" begin="0.7s" repeatCount="indefinite" path="M675,238 L675,275"/></circle>
 
       <!-- ═══ HOLOCHAIN ═══ -->
-      <rect x="15" y="285" width="430" height="170" rx="7" fill="rgba(0,229,255,.06)" stroke="rgba(0,229,255,.4)" stroke-width="1.5"/>
-      <text x="30" y="303" font-family="Share Tech Mono,monospace" font-size="8" fill="rgba(0,229,255,.5)" letter-spacing="1.5">P2P NETWORK</text>
-      <text x="230" y="320" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="13" fill="#00e5ff" font-weight="700">HOLOCHAIN CONDUCTOR</text>
-      <text x="230" y="337" text-anchor="middle" font-family="Share Tech Mono,monospace" font-size="9" fill="rgba(0,229,255,.5)">hc.exe · holochain.exe · DHT</text>
+      <rect x="15" y="285" width="430" height="170" rx="7" fill="rgba(59,130,246,.06)" stroke="rgba(59,130,246,.4)" stroke-width="1.5"/>
+      <text x="30" y="303" font-family="Share Tech Mono,monospace" font-size="8" fill="rgba(59,130,246,.5)" letter-spacing="1.5">P2P NETWORK</text>
+      <text x="230" y="320" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="13" fill="#3b82f6" font-weight="700">HOLOCHAIN CONDUCTOR</text>
+      <text x="230" y="337" text-anchor="middle" font-family="Share Tech Mono,monospace" font-size="9" fill="rgba(59,130,246,.5)">hc.exe · holochain.exe · DHT</text>
       <text x="35" y="361" font-family="Rajdhani,sans-serif" font-size="12" fill="#a8bfd8">→  Agent-centric distributed hash table</text>
       <text x="35" y="381" font-family="Rajdhani,sans-serif" font-size="12" fill="#a8bfd8">→  P2P gossip, signals &amp; validation</text>
       <text x="35" y="401" font-family="Rajdhani,sans-serif" font-size="12" fill="#a8bfd8">→  Source-chain data integrity</text>
@@ -759,16 +759,16 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
     <div style="text-align:center">
       <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.2em;color:#a8bfd8;margin-bottom:20px">PART OF THE OMNIVERSE</div>
       <svg width="120" height="120" viewBox="0 0 120 120" fill="none" style="margin-bottom:24px">
-        <polygon points="95,40 60,20 25,40 25,80 60,100 95,80" stroke="#00e5ff" stroke-width="1.2" fill="none" opacity="0.6"/>
+        <polygon points="95,40 60,20 25,40 25,80 60,100 95,80" stroke="#3b82f6" stroke-width="1.2" fill="none" opacity="0.6"/>
         <polygon points="80,48 60,37 40,48 40,72 60,83 80,72" stroke="#8b5cf6" stroke-width="0.8" fill="none" opacity="0.5"/>
-        <circle cx="60" cy="60" r="8" stroke="#00e5ff" stroke-width="1" fill="none"/>
-        <circle cx="60" cy="60" r="3" fill="#00e5ff"/>
-        <line x1="60" y1="52" x2="60" y2="20" stroke="#00e5ff" stroke-width="0.5" opacity="0.3"/>
-        <line x1="60" y1="68" x2="60" y2="100" stroke="#00e5ff" stroke-width="0.5" opacity="0.3"/>
-        <line x1="52" y1="56" x2="25" y2="40" stroke="#00e5ff" stroke-width="0.5" opacity="0.3"/>
-        <line x1="68" y1="56" x2="95" y2="40" stroke="#00e5ff" stroke-width="0.5" opacity="0.3"/>
-        <line x1="52" y1="64" x2="25" y2="80" stroke="#00e5ff" stroke-width="0.5" opacity="0.3"/>
-        <line x1="68" y1="64" x2="95" y2="80" stroke="#00e5ff" stroke-width="0.5" opacity="0.3"/>
+        <circle cx="60" cy="60" r="8" stroke="#3b82f6" stroke-width="1" fill="none"/>
+        <circle cx="60" cy="60" r="3" fill="#3b82f6"/>
+        <line x1="60" y1="52" x2="60" y2="20" stroke="#3b82f6" stroke-width="0.5" opacity="0.3"/>
+        <line x1="60" y1="68" x2="60" y2="100" stroke="#3b82f6" stroke-width="0.5" opacity="0.3"/>
+        <line x1="52" y1="56" x2="25" y2="40" stroke="#3b82f6" stroke-width="0.5" opacity="0.3"/>
+        <line x1="68" y1="56" x2="95" y2="40" stroke="#3b82f6" stroke-width="0.5" opacity="0.3"/>
+        <line x1="52" y1="64" x2="25" y2="80" stroke="#3b82f6" stroke-width="0.5" opacity="0.3"/>
+        <line x1="68" y1="64" x2="95" y2="80" stroke="#3b82f6" stroke-width="0.5" opacity="0.3"/>
       </svg>
       <div style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--cyan);letter-spacing:.1em;margin-bottom:8px">OASIS OMNIVERSE</div>
       <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#a8bfd8;letter-spacing:.15em;margin-bottom:20px">oasisomniverse.one</div>
@@ -900,7 +900,7 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
     <span class="section-line violet"></span>
     <div style="background:rgba(139,92,246,.07);border:1px solid rgba(139,92,246,.2);border-radius:18px;padding:44px 48px;position:relative;overflow:hidden">
       <div style="position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(139,92,246,.12),transparent 70%);pointer-events:none"></div>
-      <div style="position:absolute;bottom:-40px;left:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(0,229,255,.06),transparent 70%);pointer-events:none"></div>
+      <div style="position:absolute;bottom:-40px;left:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(59,130,246,.06),transparent 70%);pointer-events:none"></div>
       <p style="font-size:17px;color:#a8bfd8;line-height:1.85;margin-bottom:22px;position:relative">
         You may have noticed there haven't been any new releases for around two years — and I wanted to be open about why.
         During that time I've been heads-down building the broader <strong style="color:var(--heading)">OASIS ecosystem</strong>:
@@ -933,8 +933,8 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
     <div style="margin-bottom:28px;text-align:center">
       <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px">
         <svg width="20" height="20" viewBox="0 0 54 54" fill="none">
-          <polygon points="42.6,18 27,9 11.4,18 11.4,36 27,45 42.6,36" stroke="#00e5ff" stroke-width="1.4" fill="none"/>
-          <circle cx="27" cy="27" r="3" fill="#00e5ff"/>
+          <polygon points="42.6,18 27,9 11.4,18 11.4,36 27,45 42.6,36" stroke="#3b82f6" stroke-width="1.4" fill="none"/>
+          <circle cx="27" cy="27" r="3" fill="#3b82f6"/>
         </svg>
         <span style="font-family:'Orbitron',sans-serif;font-size:16px;font-weight:700;letter-spacing:.12em;color:var(--cyan)">HOLONET</span>
       </div>
@@ -1028,7 +1028,7 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
 
 <!-- Lightbox -->
 <div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;z-index:2000;background:rgba(1,4,18,.96);backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:20px;cursor:zoom-out">
-  <img id="lightboxImg" src="" alt="" style="max-width:90vw;max-height:90vh;border-radius:12px;border:1px solid rgba(0,229,255,.2);box-shadow:0 0 60px rgba(0,229,255,.2);object-fit:contain">
+  <img id="lightboxImg" src="" alt="" style="max-width:90vw;max-height:90vh;border-radius:12px;border:1px solid rgba(59,130,246,.2);box-shadow:0 0 60px rgba(59,130,246,.2);object-fit:contain">
   <button onclick="closeLightbox()" style="position:fixed;top:20px;right:24px;background:none;border:none;color:#fff;font-size:32px;cursor:pointer;opacity:.7;line-height:1">✕</button>
 </div>
 
@@ -1102,8 +1102,8 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeLightbox(); }
   for(var i=0;i<N;i++){
     for(var j=i+1;j<N;j++){
       var adjacent=(j===i+1)||(i===0&&j===N-1);
-      if(adjacent) line(nodes[i],nodes[j],'rgba(0,229,255,.30)');               // ring edge
-      else line(nodes[i],nodes[j], ((i+j)%5===0)?'rgba(139,92,246,.12)':'rgba(0,229,255,.085)'); // interior chord
+      if(adjacent) line(nodes[i],nodes[j],'rgba(59,130,246,.30)');               // ring edge
+      else line(nodes[i],nodes[j], ((i+j)%5===0)?'rgba(139,92,246,.12)':'rgba(59,130,246,.085)'); // interior chord
     }
   }
   // 2) routing packets — hop node→node→node across the interior
@@ -1114,7 +1114,7 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeLightbox(); }
     var d='M'+hops.map(function(p){return p.x.toFixed(0)+','+p.y.toFixed(0);}).join(' L');
     var c=el('circle');
     c.setAttribute('r',(3+Math.random()*1.1).toFixed(1));
-    c.setAttribute('fill', k%3===0 ? '#8b5cf6' : '#00e5ff');
+    c.setAttribute('fill', k%3===0 ? '#8b5cf6' : '#3b82f6');
     c.setAttribute('opacity','.9');
     c.setAttribute('filter','url(#hb-soft)');
     var m=el('animateMotion');
