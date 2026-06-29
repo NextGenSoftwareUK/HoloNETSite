@@ -159,8 +159,10 @@ footer ul li a:hover{color:var(--cyan);filter:drop-shadow(0 0 8px rgba(59,130,24
 .footer-socials{display:flex;gap:14px}
 .footer-social{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:#a8bfd8;text-decoration:none;transition:color .2s}
 .footer-social:hover{color:var(--cyan)}
-@media(max-width:900px){.hypernet-band{grid-template-columns:1fr}.oasis-band{grid-template-columns:1fr}.ways-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.hero{padding:80px 20px 60px}.section{padding:60px 40px}.hypernet-band{padding:32px 24px}.oasis-band{padding:28px 24px}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:16px;text-align:center}}
+@media(max-width:900px){.hypernet-band{grid-template-columns:1fr}.oasis-band{grid-template-columns:1fr}.ways-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:repeat(3,1fr)!important}.infographic-grid{grid-template-columns:1fr}.nuget-grid{grid-template-columns:1fr}.hn-diag-grid{grid-template-columns:1fr}}
+@media(max-width:720px){.footer-grid{grid-template-columns:repeat(2,1fr)!important;gap:20px}}
+@media(max-width:600px){.hero{padding:80px 20px 60px}.section{padding:60px 40px}.hypernet-band{padding:32px 24px}.oasis-band{padding:28px 24px}.footer-bottom{flex-direction:column;gap:16px;text-align:center}}
+@media(max-width:520px){.footer-grid{grid-template-columns:1fr!important;gap:16px}.section-title{font-size:22px}.pkg-card,.feat-card,.way-card{padding:20px 18px}.pkg-desc,.feat-desc,.way-desc{font-size:14px}}
 
 /* ── HERO ANIMATED BACKGROUND ── */
 .hero-bg{order:10;display:block;width:100%;max-width:700px;margin-top:40px;pointer-events:none;opacity:.75}
@@ -208,13 +210,17 @@ a:hover{filter:drop-shadow(0 0 8px rgba(59,130,246,1)) drop-shadow(0 0 20px rgba
   <div class="nav-links">
     <a href="#packages">PACKAGES</a>
     <a href="#features">FEATURES</a>
+    <a href="#approaches">USAGE</a>
+    <a href="#stack">STACK</a>
     <a href="#quickstart">QUICK START</a>
+    <a href="#hypernet">HYPERNET</a>
     <a href="#oasis">OASIS</a>
     <a href="#downloads">DOWNLOADS</a>
+    <a href="#community">COMMUNITY</a>
     <a href="https://oasisomniverse.one" target="_blank" rel="noopener">ECOSYSTEM</a>
   </div>
   <a href="https://github.com/holochain-open-dev/holochain-client-csharp" target="_blank" rel="noopener" class="nav-cta">GITHUB →</a>
-  <div class="nav-hamburger" onclick="this.nextElementSibling&&(this.nextElementSibling.style.display='flex')">
+  <div class="nav-hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
 </nav>
@@ -944,7 +950,7 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
       </div>
       <div style="font-size:16px;color:#a8bfd8;line-height:1.7;margin-bottom:16px;max-width:600px;margin-left:auto;margin-right:auto">The world's first .NET &amp; Unity client for Holochain. Part of the OASIS Omniverse ecosystem.</div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:24px;margin-bottom:36px">
+    <div class="footer-grid" style="display:grid;grid-template-columns:repeat(6,1fr);gap:24px;margin-bottom:36px">
         <div>
           <div style="font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--heading-sub);margin-bottom:12px">ECOSYSTEM</div>
           <ul style="list-style:none;display:grid;gap:8px">
@@ -1051,6 +1057,22 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
 </div>
 
 <script>
+// ── MOBILE MENU ──
+function toggleMenu(){
+  const links = document.querySelector('.nav-links');
+  if(links.style.display === 'flex'){
+    links.style.display = 'none';
+  } else {
+    links.style.cssText = 'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:rgba(3,7,20,.97);padding:20px 28px;gap:18px;border-bottom:1px solid rgba(59,130,246,.12)';
+  }
+}
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    const links = document.querySelector('.nav-links');
+    if(window.innerWidth < 800) links.style.display = 'none';
+  });
+});
+
 // ── STAR CANVAS ──
 (function(){
   const c = document.getElementById('stars');
