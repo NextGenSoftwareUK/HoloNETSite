@@ -33,7 +33,7 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 .nav-cta:hover{background:rgba(59,130,246,.08);border-color:rgba(59,130,246,.55)}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto}
 .nav-hamburger span{display:block;width:22px;height:2px;background:var(--cyan);border-radius:2px}
-@media(max-width:800px){.nav{padding:0 20px}.nav-links{display:none}.nav-hamburger{display:flex}}
+@media(max-width:800px){.nav{padding:0 1rem}.nav-links{display:none}.nav-hamburger{display:flex}.nav-cta{display:none!important}}
 
 /* ── SECTIONS ── */
 .section{position:relative;z-index:2;padding:90px 40px;max-width:1180px;margin:0 auto}
@@ -159,11 +159,11 @@ footer ul li a:hover{color:var(--cyan);filter:drop-shadow(0 0 8px rgba(59,130,24
 .footer-socials{display:flex;gap:14px}
 .footer-social{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:#a8bfd8;text-decoration:none;transition:color .2s}
 .footer-social:hover{color:var(--cyan)}
-@media(max-width:900px){.hypernet-band{grid-template-columns:1fr}.oasis-band{grid-template-columns:1fr}.ways-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:repeat(3,1fr)!important}.infographic-grid{grid-template-columns:1fr}.nuget-grid{grid-template-columns:1fr}.hn-diag-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.hypernet-band{grid-template-columns:1fr}.oasis-band{grid-template-columns:1fr}.ways-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:repeat(3,1fr)!important}.infographic-grid{grid-template-columns:1fr}.nuget-grid{grid-template-columns:1fr}.hn-diag-grid{grid-template-columns:1fr!important}footer{padding-left:1rem!important;padding-right:1rem!important}}
 @media(max-width:720px){.footer-grid{grid-template-columns:repeat(2,1fr)!important;gap:20px}}
 @media(max-width:900px){.section{padding:60px 1rem}}
 @media(max-width:600px){.hero{padding:80px 20px 60px}.section{padding:60px .75rem}.hypernet-band{padding:32px 24px}.oasis-band{padding:28px 24px}.footer-bottom{flex-direction:column;gap:16px;text-align:center}}
-@media(max-width:520px){.section{padding:40px .75rem}.footer-grid{grid-template-columns:1fr!important;gap:16px}.section-title{font-size:22px}.pkg-card,.feat-card,.way-card{padding:20px 18px}.pkg-desc,.feat-desc,.way-desc{font-size:14px}}
+@media(max-width:520px){.section{padding:40px .75rem}.footer-grid{grid-template-columns:1fr!important;gap:16px}.section-title{font-size:22px}.pkg-card,.feat-card,.way-card{padding:20px 18px}.pkg-desc,.feat-desc,.way-desc{font-size:14px}footer{padding-left:.75rem!important;padding-right:.75rem!important}.arch-wrap{padding:.75rem!important}}
 
 /* ── HERO ANIMATED BACKGROUND ── */
 .hero-bg{order:10;display:block;width:100%;max-width:700px;margin-top:40px;pointer-events:none;opacity:.75}
@@ -667,7 +667,7 @@ holoNETClient.<span class="fn">OnError</span>              += HoloNETClient_OnEr
   <span class="section-line"></span>
   <p class="section-sub">How the full HoloNET package suite stacks — from your .NET, Unity or Unreal app, down through the Client, ORM, Manager, HDK and HyperNET, into the Holochain Conductor &amp; DHT, and out to the wider OASIS Omniverse via the HoloOASIS bridge.</p>
   <div class="arch-wrap reveal">
-    <svg viewBox="0 0 900 470" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:580px;display:block">
+    <svg viewBox="0 0 900 470" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
       <defs>
         <filter id="hs-glow" x="-5%" y="-10%" width="110%" height="120%">
           <feGaussianBlur stdDeviation="3" result="b"/>
