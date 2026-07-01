@@ -29,6 +29,7 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 .nav-links{display:flex;gap:28px;margin-left:auto}
 .nav-links a{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.12em;color:#a8bfd8;text-decoration:none;transition:color .2s;text-transform:uppercase}
 .nav-links a:hover{color:var(--cyan)}
+.nav-links-mobile-only{display:none}
 .nav-cta{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:var(--cyan);border:1px solid rgba(59,130,246,.3);border-radius:999px;padding:8px 18px;text-decoration:none;transition:background .2s,border-color .2s;white-space:nowrap}
 .nav-cta:hover{background:rgba(59,130,246,.08);border-color:rgba(59,130,246,.55)}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;z-index:1000;position:relative}
@@ -51,6 +52,7 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
   }
   .nav-links.open{transform:translateX(0)}
   .nav-links a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.05);width:100%}
+  .nav-links-mobile-only{display:block}
 }
 
 /* ── SECTIONS ── */
@@ -239,6 +241,8 @@ a:hover{filter:drop-shadow(0 0 8px rgba(59,130,246,1)) drop-shadow(0 0 20px rgba
     <a href="#why">WHY IT MATTERS</a>
     <a href="#roadmap">ROADMAP</a>
     <a href="#community">COMMUNITY</a>
+    <a href="https://oasisomniverse.one" target="_blank" rel="noopener" class="nav-links-mobile-only">ECOSYSTEM</a>
+    <a href="https://github.com/holochain-open-dev/holochain-client-csharp" target="_blank" rel="noopener" class="nav-links-mobile-only">GITHUB</a>
   </div>
   <a href="https://oasisomniverse.one" target="_blank" rel="noopener" class="nav-cta">ECOSYSTEM</a>
   <a href="https://github.com/holochain-open-dev/holochain-client-csharp" target="_blank" rel="noopener" class="nav-cta">GITHUB →</a>
