@@ -1038,6 +1038,13 @@ ada.FirstName = <span class="st">"Grace"</span>;       <span class="cm">// chang
     </div>
 
     <div class="pkg-card reveal">
+      <div class="pkg-kicker">4.6.0 · CONDUCTOR</div>
+      <div class="pkg-title">No conductor installed? HoloNET downloads it</div>
+      <div class="pkg-desc">New <code>AutoDownloadConductor</code> setting, on by default: if there is no Holochain on the computer, HoloNET downloads the official one for your OS and CPU the first time (Windows, Linux or macOS), checks it against a SHA-256 and reuses it. Works in containers and on servers; the Embedded packages stay for offline use.</div>
+      <a href="https://docs.holonet.oasisomniverse.one/conductor" target="_blank" rel="noopener" class="pkg-link">HOW IT WORKS →</a>
+    </div>
+
+    <div class="pkg-card reveal">
       <div class="pkg-kicker">4.5 · API</div>
       <div class="pkg-title">Per-key storage, shared data, notifications</div>
       <div class="pkg-desc">Each key is its own entry, so saving one key costs the same however big the store. Shared data every agent can read and write, change notifications, broadcast signals, typed values, and Configure / UseConductor in one line.</div>
