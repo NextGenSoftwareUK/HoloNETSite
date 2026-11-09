@@ -328,7 +328,7 @@ a:hover{filter:drop-shadow(0 0 8px rgba(59,130,246,1)) drop-shadow(0 0 20px rgba
   <div class="section-kicker">NEW IN 4.6</div>
   <h2 class="section-title">START IN ONE COMMAND</h2>
   <span class="section-line"></span>
-  <p class="section-sub">Project templates for the .NET app types people actually build — each with HoloNET already wired in. Pick the app type with the template, and the HoloNET library (API, Client, ORM or HyperNET) with an option. On Windows, Linux and macOS the Holochain conductor is bundled, so it runs straight away.</p>
+  <p class="section-sub">Project templates for the .NET app types people actually build — each with HoloNET already wired in. Pick the app type with the template, and the HoloNET library (API, Client, ORM or HyperNET) with an option. On Windows the Holochain conductor is bundled, and on Linux and macOS HoloNET downloads the official one the first time, so it runs straight away.</p>
   <div class="code-wrap reveal">
     <div class="code-header">
       <div class="code-dot" style="background:#ff5f57"></div>
@@ -759,7 +759,7 @@ dotnet run</pre>
       <div class="code-dot" style="background:#28c840"></div>
       <span class="code-lang">C#</span>
     </div>
-    <pre><span class="cm">// dotnet add package NextGenSoftware.Holochain.HoloNET.API.Embedded   (bundles the conductor on Windows, Linux and macOS)</span>
+    <pre><span class="cm">// dotnet add package NextGenSoftware.Holochain.HoloNET.API.Embedded   (bundles the conductor on Windows; use .Embedded.LinuxX64, .LinuxArm64, .MacX64 or .MacArm64 on Linux and macOS)</span>
 
 <span class="cm">// HoloNET API: one line each</span>
 <span class="kw">await</span> <span class="cn">HoloNETAPI</span>.<span class="fn">SaveDataAsync</span>(<span class="st">"greeting"</span>, <span class="st">"Hello, Holochain!"</span>);
