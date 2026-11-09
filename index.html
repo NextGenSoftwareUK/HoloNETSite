@@ -37,7 +37,7 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .nav-hamburger.open span:nth-child(2){opacity:0}
 .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-@media(max-width:800px){
+@media(max-width:1800px){
   .nav{padding:0 1rem}
   .nav-hamburger{display:flex}
   .nav-cta{display:none!important}
@@ -115,7 +115,8 @@ canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 .code-dot{width:10px;height:10px;border-radius:50%}
 .code-lang{font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.15em;color:#a8bfd8;margin-left:auto}
 pre{padding:24px 28px;overflow-x:auto;font-family:'Share Tech Mono',monospace;font-size:13px;line-height:1.75;color:#c8e0ff}
-.kw{color:#7dd3fc}.cm{color:#4a6070;font-style:italic}.st{color:#86efac}.cn{color:#a78bfa}.fn{color:#60a5fa}
+.feat-desc a,.feat-desc a:visited{color:#7dd3fc;font-family:'Share Tech Mono',monospace;font-size:.85rem;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(125,211,252,.5);transition:color .2s,border-color .2s}.feat-desc a:hover{color:#fff;border-bottom-color:#fff}
+.kw{color:#7dd3fc}.cm{color:#8fa8c0;font-style:italic}.st{color:#86efac}.cn{color:#a78bfa}.fn{color:#60a5fa}
 
 /* ── INFOGRAPHIC ── */
 .infographic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1000px;margin:0 auto}
@@ -327,7 +328,7 @@ a:hover{filter:drop-shadow(0 0 8px rgba(59,130,246,1)) drop-shadow(0 0 20px rgba
   <div class="section-kicker">NEW IN 4.6</div>
   <h2 class="section-title">START IN ONE COMMAND</h2>
   <span class="section-line"></span>
-  <p class="section-sub">Project templates for the .NET app types people actually build — each with HoloNET already wired in. Pick the app type with the template, and the HoloNET library (API, Client, ORM or HyperNET) with an option. On Windows the Holochain conductor is bundled, so it runs straight away.</p>
+  <p class="section-sub">Project templates for the .NET app types people actually build — each with HoloNET already wired in. Pick the app type with the template, and the HoloNET library (API, Client, ORM or HyperNET) with an option. On Windows, Linux and macOS the Holochain conductor is bundled, so it runs straight away.</p>
   <div class="code-wrap reveal">
     <div class="code-header">
       <div class="code-dot" style="background:#ff5f57"></div>
@@ -416,6 +417,18 @@ dotnet run</pre>
     <div class="feat-card reveal" style="padding:18px 20px">
       <div class="feat-title" style="font-size:15px;margin-bottom:6px">Unity</div>
       <div class="feat-desc" style="font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--cyan)">dotnet new holonet-unity</div>
+    </div>
+    <div class="feat-card reveal" style="padding:18px 20px">
+      <div class="feat-title" style="font-size:15px;margin-bottom:6px">gRPC service</div>
+      <div class="feat-desc" style="font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--cyan)">dotnet new holonet-grpc</div>
+    </div>
+    <div class="feat-card reveal" style="padding:18px 20px">
+      <div class="feat-title" style="font-size:15px;margin-bottom:6px">Class library</div>
+      <div class="feat-desc" style="font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--cyan)">dotnet new holonet-classlib</div>
+    </div>
+    <div class="feat-card reveal" style="padding:18px 20px">
+      <div class="feat-title" style="font-size:15px;margin-bottom:6px">xUnit tests</div>
+      <div class="feat-desc" style="font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--cyan)">dotnet new holonet-xunit</div>
     </div>
   </div>
   <div class="doc-links" style="margin-top:36px">
@@ -562,7 +575,7 @@ dotnet run</pre>
     <div class="feat-card reveal">
       <div class="feat-icon">🔷</div>
       <div class="feat-kicker">PLATFORMS</div>
-      <div class="feat-title">.NET 8.0 &amp; Unity/Unreal</div>
+      <div class="feat-title">.NET 10 &amp; Unity/Unreal</div>
       <div class="feat-desc">Targets every modern platform — PC, Mac, Linux, iOS, Android, Xbox, PS4, Wii, VR/AR/XR, MagicLeap, SmartTV and web via Blazor. One client, everywhere .NET runs.</div>
     </div>
     <div class="feat-card reveal">
@@ -746,7 +759,7 @@ dotnet run</pre>
       <div class="code-dot" style="background:#28c840"></div>
       <span class="code-lang">C#</span>
     </div>
-    <pre><span class="cm">// dotnet add package NextGenSoftware.Holochain.HoloNET.API.Embedded   (bundles the conductor on Windows)</span>
+    <pre><span class="cm">// dotnet add package NextGenSoftware.Holochain.HoloNET.API.Embedded   (bundles the conductor on Windows, Linux and macOS)</span>
 
 <span class="cm">// HoloNET API: one line each</span>
 <span class="kw">await</span> <span class="cn">HoloNETAPI</span>.<span class="fn">SaveDataAsync</span>(<span class="st">"greeting"</span>, <span class="st">"Hello, Holochain!"</span>);
@@ -876,7 +889,7 @@ ada.FirstName = <span class="st">"Grace"</span>;       <span class="cm">// chang
       <text x="670" y="337" text-anchor="middle" font-family="Share Tech Mono,monospace" font-size="9" fill="rgba(167,139,250,.55)">OASIS HyperDrive · COSMIC ORM</text>
       <text x="475" y="361" font-family="Rajdhani,sans-serif" font-size="12" fill="#a8bfd8">→  Bridges Holochain to the WEB4 OASIS API</text>
       <text x="475" y="381" font-family="Rajdhani,sans-serif" font-size="12" fill="#a8bfd8">→  Ethereum · Solana · IPFS</text>
-      <text x="475" y="401" font-family="Rajdhani,sans-serif" font-size="12" fill="#a8bfd8">→  MongoDB · Neo4j · 50+ providers</text>
+      <text x="475" y="401" font-family="Rajdhani,sans-serif" font-size="12" fill="#a8bfd8">→  MongoDB · Neo4j · 222+ providers</text>
       <text x="475" y="421" font-family="Rajdhani,sans-serif" font-size="12" fill="#a8bfd8">→  Auto-replication &amp; auto-failover</text>
       <text x="475" y="441" font-family="Rajdhani,sans-serif" font-size="12" fill="#a8bfd8">→  One unified COSMIC ORM API</text>
     </svg>
@@ -915,7 +928,7 @@ ada.FirstName = <span class="st">"Grace"</span>;       <span class="cm">// chang
         <span class="oasis-pill">MONGODB</span>
         <span class="oasis-pill">NEO4J</span>
         <span class="oasis-pill">THREEFOLD</span>
-        <span class="oasis-pill">50+ MORE</span>
+        <span class="oasis-pill">222+ MORE</span>
       </div>
     </div>
     <div style="text-align:center">
@@ -1079,6 +1092,20 @@ ada.FirstName = <span class="st">"Grace"</span>;       <span class="cm">// chang
       <a href="https://docs.holonet.oasisomniverse.one/getting-started" target="_blank" rel="noopener" class="pkg-link">GETTING STARTED →</a>
     </div>
 
+    <div class="pkg-card reveal">
+      <div class="pkg-kicker">4.6.0 · OFFLINE</div>
+      <div class="pkg-title">Embedded conductor on Linux and macOS</div>
+      <div class="pkg-desc">Offline Embedded packages for Linux x64/arm64 and macOS Intel/Apple Silicon, for the Client, ORM, HyperNET and API — 77 packages in all. The conductor is checked against a SHA-256 at pack time and unpacked on first use, so it runs with no download.</div>
+      <a href="https://docs.holonet.oasisomniverse.one/packages" target="_blank" rel="noopener" class="pkg-link">ALL PACKAGES →</a>
+    </div>
+
+    <div class="pkg-card reveal">
+      <div class="pkg-kicker">4.6.0 · TEMPLATES</div>
+      <div class="pkg-title">20 templates, now with gRPC, libraries and tests</div>
+      <div class="pkg-desc">New <code>holonet-grpc</code>, <code>holonet-classlib</code> and <code>holonet-xunit</code> templates join the 17 app types, each with HoloNET already wired in and your choice of API, Client, ORM or HyperNET.</div>
+      <a href="https://docs.holonet.oasisomniverse.one/templates" target="_blank" rel="noopener" class="pkg-link">TEMPLATES →</a>
+    </div>
+
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:1000px;margin:48px auto 0">
     <div class="feat-card reveal"><div class="feat-kicker">DOCUMENTATION</div><div class="feat-title">DOCS</div><div class="feat-desc">Every guide and the full API reference, generated from the code.<br><a href="https://docs.holonet.oasisomniverse.one" target="_blank" rel="noopener">docs.holonet.oasisomniverse.one →</a></div></div>
@@ -1099,9 +1126,9 @@ ada.FirstName = <span class="st">"Grace"</span>;       <span class="cm">// chang
       <div class="feat-desc">HoloNET Manager is being ported from WPF to MAUI, Uno and OpenSilver — enabling native cross-platform deployment to Windows, Mac, Linux, iOS, Android and web.</div>
     </div>
     <div class="feat-card reveal">
-      <div class="feat-kicker">DONE IN 4.6</div>
-      <div class="feat-title">.NET 10 + TEMPLATES</div>
-      <div class="feat-desc">The suite targets .NET 10 (the Client, ORM, HyperNET and API also keep .NET Standard 2.1 for Unity), and every popular .NET app type has a <code>dotnet new</code> template.</div>
+      <div class="feat-kicker">COMING SOON</div>
+      <div class="feat-title">HOLONET TEST KIT</div>
+      <div class="feat-desc">A mock conductor and test helpers so you can unit-test HoloNET apps in milliseconds, with no Holochain running — plus snapshot and replay of zome calls and signals for repeatable integration tests.</div>
     </div>
     <div class="feat-card reveal">
       <div class="feat-kicker">COMING SOON</div>
@@ -1116,7 +1143,7 @@ ada.FirstName = <span class="st">"Grace"</span>;       <span class="cm">// chang
     <div class="feat-card reveal">
       <div class="feat-kicker">COMING SOON</div>
       <div class="feat-title">HOLOOASIS IMPROVEMENTS</div>
-      <div class="feat-desc">Ongoing improvements to the HoloOASIS Storage and Network providers — deeper coverage of the 50+ OASIS-supported platforms and a smoother bridge between Holochain and the wider Web2/Web3 ecosystem.</div>
+      <div class="feat-desc">Ongoing improvements to the HoloOASIS Storage and Network providers — deeper coverage of the 222+ OASIS-supported platforms and a smoother bridge between Holochain and the wider Web2/Web3 ecosystem.</div>
     </div>
     <div class="feat-card reveal" style="border-style:dashed;border-color:rgba(139,92,246,.25);background:rgba(139,92,246,.04)">
       <div class="feat-kicker violet">&amp; ALWAYS EVOLVING</div>
@@ -1319,7 +1346,7 @@ function toggleMenu(){
 }
 document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => {
-    if(window.innerWidth < 800){
+    if(window.innerWidth < 1800){
       document.querySelector('.nav-links').classList.remove('open');
       document.querySelector('.nav-hamburger').classList.remove('open');
     }
