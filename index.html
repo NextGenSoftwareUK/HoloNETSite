@@ -329,6 +329,7 @@ a:hover{filter:drop-shadow(0 0 8px rgba(59,130,246,1)) drop-shadow(0 0 20px rgba
   <h2 class="section-title">START IN ONE COMMAND</h2>
   <span class="section-line"></span>
   <p class="section-sub">Project templates for the .NET app types people actually build — each with HoloNET already wired in. Pick the app type with the template, and the HoloNET library (API, Client, ORM or HyperNET) with an option. On Windows the Holochain conductor is bundled, and on Linux and macOS HoloNET downloads the official one the first time, so it runs straight away.</p>
+  <p class="section-sub" style="margin-top:14px">On Android the MAUI, MAUI Blazor, Uno and Android templates start the Holochain runtime on the phone, the way Our World does: they use the phone's shared <a href="https://github.com/NextGenSoftwareUK/android-service-runtime" target="_blank">Holochain Service Runtime</a> when it is installed (the user approves a notification once) and fall back to a conductor built into the app. This is ready to test, not yet proven on a physical phone. On iOS the conductor runs on the simulator but is not proven on a physical iPhone, so the iOS template still connects to a conductor you run. Runtime releases: <a href="https://github.com/NextGenSoftwareUK/android-service-runtime/releases/tag/oasis-holochain-0.7-v1.0.0" target="_blank">Android</a>, <a href="https://github.com/NextGenSoftwareUK/android-service-runtime/releases/tag/oasis-ios-conductor-v0.7.1" target="_blank">iOS</a> and the <a href="https://github.com/NextGenSoftwareUK/OASIS/releases" target="_blank">OASIS Edge runtime</a>.</p>
   <div class="code-wrap reveal">
     <div class="code-header">
       <div class="code-dot" style="background:#ff5f57"></div>
@@ -436,6 +437,8 @@ dotnet run</pre>
     <a class="doc-link" href="https://learn.holonet.oasisomniverse.one/tutorials/00-up-and-running-in-5-minutes" target="_blank">UP AND RUNNING IN 5 MINUTES</a>
     <a class="doc-link" href="https://learn.holonet.oasisomniverse.one/tutorials/07-a-template-for-every-app" target="_blank">A TEMPLATE FOR EVERY APP</a>
     <a class="doc-link" href="https://github.com/holochain-open-dev/holochain-client-csharp/tree/main/templates" target="_blank">TEMPLATES ON GITHUB</a>
+    <a class="doc-link" href="https://github.com/NextGenSoftwareUK/android-service-runtime" target="_blank">ANDROID &amp; iOS RUNTIME</a>
+    <a class="doc-link" href="https://github.com/NextGenSoftwareUK/OASIS/releases" target="_blank">OASIS EDGE RUNTIME</a>
   </div>
 </section>
 
@@ -1124,6 +1127,11 @@ ada.FirstName = <span class="st">"Grace"</span>;       <span class="cm">// chang
       <div class="feat-kicker">IN PROGRESS</div>
       <div class="feat-title">MAUI + UNO + OPENSILVER</div>
       <div class="feat-desc">HoloNET Manager is being ported from WPF to MAUI, Uno and OpenSilver — enabling native cross-platform deployment to Windows, Mac, Linux, iOS, Android and web.</div>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-kicker">IN PROGRESS</div>
+      <div class="feat-title">HOLOCHAIN ON PHONES</div>
+      <div class="feat-desc">The Android templates use the phone's shared Holochain runtime with a built-in fallback (as Our World does through the <a href="https://github.com/NextGenSoftwareUK/OASIS/releases" target="_blank">OASIS Edge runtime</a>); next is testing on a physical phone, publishing the runtime libraries, and the <a href="https://github.com/NextGenSoftwareUK/android-service-runtime/releases/tag/oasis-ios-conductor-v0.7.1" target="_blank">iOS conductor</a> on a physical iPhone. <a href="https://github.com/NextGenSoftwareUK/android-service-runtime" target="_blank">Source</a>.</div>
     </div>
     <div class="feat-card reveal">
       <div class="feat-kicker">COMING SOON</div>
