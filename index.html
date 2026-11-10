@@ -329,7 +329,7 @@ a:hover{filter:drop-shadow(0 0 8px rgba(59,130,246,1)) drop-shadow(0 0 20px rgba
   <div class="section-kicker">NEW IN 4.6</div>
   <h2 class="section-title">START IN ONE COMMAND</h2>
   <span class="section-line"></span>
-  <p class="section-sub">Project templates for the .NET app types people actually build — each with HoloNET already wired in. Pick the app type with the template, and the HoloNET library (API, Client, ORM or HyperNET) with an option. On Windows the Holochain conductor is bundled, and on Linux and macOS HoloNET downloads the official one the first time, so it runs straight away.</p>
+  <p class="section-sub">Project templates for the .NET app types people actually build — each with HoloNET already wired in. Pick the app type with the template, and the HoloNET library (API, Client, ORM or HyperNET) with an option. On Windows the Holochain conductor is bundled, and on Linux and macOS HoloNET downloads the official one the first time (or use the offline Embedded packages for Windows, Linux and macOS), with Holochain 0.7.1 or 0.7.0, so it runs straight away.</p>
   <p class="section-sub" style="margin-top:14px">On Android the MAUI, MAUI Blazor, Uno and Android templates start the Holochain runtime on the phone, the way Our World does: they use the phone's shared <a href="https://github.com/NextGenSoftwareUK/android-service-runtime" target="_blank">Holochain Service Runtime</a> when it is installed (the user approves a notification once) and fall back to a conductor built into the app. This is ready to test, not yet proven on a physical phone. On iOS the conductor is linked into the app through the iOS bridge; it runs on the simulator but is not proven on a physical iPhone. Runtime release: <a href="https://github.com/NextGenSoftwareUK/android-service-runtime/releases/tag/oasis-holochain-0.7-v1.1.0" target="_blank">Holochain 0.7 for OASIS: Android + iOS</a> (the runtime apps, the Android libraries the templates download, the iOS conductor and the iOS bridge, with notes on what is proven), and the OASIS Edge runtime: <a href="https://github.com/NextGenSoftwareUK/OASIS/releases/tag/OASIS-Edge-Runtime-v1.2.0" target="_blank">Edge only</a>, <a href="https://github.com/NextGenSoftwareUK/OASIS/releases/tag/OGEngineClient-Edge-v2.1.0" target="_blank">OGEngineClient + Edge</a>, <a href="https://github.com/NextGenSoftwareUK/OASIS/releases/tag/OASIS-Edge-Unity-v1.1.0" target="_blank">OGEngineClient + Edge + Unity</a>, <a href="https://github.com/NextGenSoftwareUK/OASIS/releases/tag/OGEngineClient-RemoteOnly-v2.1.0" target="_blank">OGEngineClient RemoteOnly</a>.</p>
   <div class="code-wrap reveal">
     <div class="code-header">
@@ -572,7 +572,7 @@ dotnet run</pre>
       </div>
       <div class="pkg-kicker">ANDROID · iOS</div>
       <div class="pkg-title">Holochain on Phones</div>
-      <div class="pkg-desc">Run Holochain 0.7 on Android and iOS: the shared Holochain Service Runtime (with a built-in fallback), the libraries the Android templates download, and the iOS conductor and bridge. Ready to test; not yet proven on a physical phone.</div>
+      <div class="pkg-desc">Run Holochain 0.7.1 on Android and iOS: the shared Holochain Service Runtime (with a built-in fallback), the libraries the Android templates download, and the iOS conductor and bridge. Ready to test; not yet proven on a physical phone.</div>
       <a href="https://github.com/NextGenSoftwareUK/android-service-runtime/releases/tag/oasis-holochain-0.7-v1.1.0" target="_blank" rel="noopener" class="pkg-link">RELEASE →</a>
     </div>
 
@@ -1113,7 +1113,7 @@ ada.FirstName = <span class="st">"Grace"</span>;       <span class="cm">// chang
     <div class="pkg-card reveal">
       <div class="pkg-kicker">4.4 · ORM</div>
       <div class="pkg-title">Generate hApps from your classes</div>
-      <div class="pkg-desc">The ORM can generate the Rust zome and the C# models for a hApp from metadata, using the same WEB5 STAR templates — for Holochain 0.7.</div>
+      <div class="pkg-desc">The ORM can generate the Rust zome and the C# models for a hApp from metadata, using the same WEB5 STAR templates — for Holochain 0.7.0 and 0.7.1.</div>
       <a href="https://docs.holonet.oasisomniverse.one/star-happ-generation" target="_blank" rel="noopener" class="pkg-link">HOW IT WORKS →</a>
     </div>
 
@@ -1125,7 +1125,7 @@ ada.FirstName = <span class="st">"Grace"</span>;       <span class="cm">// chang
     </div>
 
     <div class="pkg-card reveal">
-      <div class="pkg-kicker">4.x · HOLOCHAIN 0.7</div>
+      <div class="pkg-kicker">4.x · HOLOCHAIN 0.7.0 · 0.7.1</div>
       <div class="pkg-title">Holochain 0.7.0 and 0.7.1</div>
       <div class="pkg-desc">Install, enable, sign and attach in one call; app authentication tokens; zome-call capability grants; both conductors bundled so you choose per client.</div>
       <a href="https://docs.holonet.oasisomniverse.one/getting-started" target="_blank" rel="noopener" class="pkg-link">GETTING STARTED →</a>
@@ -1133,8 +1133,8 @@ ada.FirstName = <span class="st">"Grace"</span>;       <span class="cm">// chang
 
     <div class="pkg-card reveal">
       <div class="pkg-kicker">4.6.0 · OFFLINE</div>
-      <div class="pkg-title">Embedded conductor on Linux and macOS</div>
-      <div class="pkg-desc">Offline Embedded packages for Linux x64/arm64 and macOS Intel/Apple Silicon, for the Client, ORM, HyperNET and API — 77 packages in all. The conductor is checked against a SHA-256 at pack time and unpacked on first use, so it runs with no download.</div>
+      <div class="pkg-title">Embedded conductor on Windows, Linux and macOS</div>
+      <div class="pkg-desc">Offline Embedded packages for Windows, Linux (x64/arm64) and macOS (Intel/Apple Silicon), for the Client, ORM, HyperNET and API, with Holochain 0.7.1 and 0.7.0 (or just one) — 77 packages in all. The conductor is checked against a SHA-256 at pack time and unpacked on first use, so it runs with no download.</div>
       <a href="https://docs.holonet.oasisomniverse.one/packages" target="_blank" rel="noopener" class="pkg-link">ALL PACKAGES →</a>
     </div>
 
